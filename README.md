@@ -1,2 +1,2 @@
 # CppPrimer5
-solutions for CppPrimer 5th  edition
+Solutions for CppPrimer 5th  edition
