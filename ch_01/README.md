@@ -3,4 +3,4 @@
 > Review the documentation for your compiler and determine what file naming convention it uses. Compile and run the main program from page 2.
 - Windows
 
-![windows](https://cloud.githubusercontent.com/assets/1147451/8334465/a87e3528-1aca-11e5-877d-c610f087fc40.png)
+![windows](https://github.com/haodayizhia/CppPrimer5/blob/d2f735c510ab93249a011631bc833aca7cf136ee/ch_01/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-04-13%20223552.png)
