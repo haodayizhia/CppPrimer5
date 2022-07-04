@@ -73,3 +73,23 @@ int main()
 > Explain whether the following program fragment is legal.
 
 不合法，后面的```<<```运算符没有运算对象。应该去掉换行处的分号。
+
+## Exercise 1.7
+
+> Compile a program that has incorrectly nested comments.
+
+```cpp
+#include <iostream>
+int main(int argc, char *argv[])
+{
+    /*注释
+    /*注释
+     */
+    *注释已经结束
+    */
+    int a = 1;
+    return 0;
+}
+```
+错误信息：
+！[]
