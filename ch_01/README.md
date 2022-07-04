@@ -92,4 +92,4 @@ int main(int argc, char *argv[])
 }
 ```
 错误信息：
-！[]
+![ex1_7](https://github.com/haodayizhia/CppPrimer5/blob/eef6f8b281bc7f7374a90d34f9960be3d8f48b2f/ch_01/ex1_7.png)
