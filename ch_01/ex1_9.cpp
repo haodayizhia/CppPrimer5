@@ -1,3 +1,5 @@
+// sum the numbers from 50 to 100 (use while)
+
 #include <iostream>
 int main(int argc, char *argv[])
 {
@@ -10,3 +12,5 @@ int main(int argc, char *argv[])
 	std::cout << "sum of 50 to 100 inclusive is " << sum << std::endl;
 	return 0;
 }
+
+// output: the sum is 3825
