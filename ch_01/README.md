@@ -138,7 +138,7 @@ for (int i = -100; i <= 100; ++i)
     sum += i;
 ```
 
-从-100加到100，结果等于0.
+从-100加到100，结果等于0
 
 ## Exercise 1.13
 
@@ -191,3 +191,19 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+## Exercise 1.14
+
+> Compare and contrast the loops that used a for with those using a while. Are there advantages or disadvantages to using either form?
+
+- while的特点
+	- 判断的条件明显
+	- 不需要计算多少步
+- for的特点
+	- 判断更为简洁
+	- 步数清晰
+
+## Exercise 1.15
+
+> Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
+
+略
