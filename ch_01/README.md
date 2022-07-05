@@ -93,3 +93,14 @@ int main(int argc, char *argv[])
 ```
 错误信息：
 ![ex1_7](https://github.com/haodayizhia/CppPrimer5/blob/eef6f8b281bc7f7374a90d34f9960be3d8f48b2f/ch_01/ex1_7.png)
+
+## Exercise 1.8
+
+> Indicate which, if any, of the following output statements are legal:
+```cpp
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */;
+std::cout << /* "*/" /* "/*" */;
+```
+After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
