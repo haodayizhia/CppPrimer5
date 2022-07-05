@@ -104,3 +104,15 @@ std::cout << /* "*/" */;
 std::cout << /* "*/" /* "/*" */;
 ```
 > After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
+
+编译结果：
+![ex1_8](https://github.com/haodayizhia/CppPrimer5/blob/843211d1be98ea71c7461bb3eece8dfc8de13ecb/ch_01/ex1_8.png)
+改正：
+```cpp
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */";
+std::cout << /* "*/" /* "/*" */;
+```
+输出：
+/**/ */ /*
