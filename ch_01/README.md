@@ -120,3 +120,5 @@ std::cout << /* "*/" /* "/*" */;
 ```
 
 ## [Exerciese 1.9](ex1_9.cpp)
+
+## [Exerciese 1.10](ex1_10.cpp)
