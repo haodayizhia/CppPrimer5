@@ -103,4 +103,4 @@ std::cout << "*/";
 std::cout << /* "*/" */;
 std::cout << /* "*/" /* "/*" */;
 ```
-After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
+> After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
