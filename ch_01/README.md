@@ -22,6 +22,7 @@
 
 ```cpp
 #include <iostream>
+
 int main()
 {
 	std::cout << "Hello, World." << std::endl;
@@ -35,6 +36,7 @@ int main()
 
 ```cpp
 #include <iostream>
+
 int main()
 {
 	std::cout << "Enter two numbers:" << std::endl;
@@ -80,6 +82,7 @@ int main()
 
 ```cpp
 #include <iostream>
+
 int main(int argc, char *argv[])
 {
     /*注释
@@ -124,3 +127,67 @@ std::cout << /* "*/" /* "/*" */;
 ## [Exerciese 1.10](ex1_10.cpp)
 
 ## [Exerciese 1.11](ex1_11.cpp)
+
+## Exercise 1.12
+
+> What does the following for loop do? What is the final value of sum?
+
+```cpp
+int sum = 0;
+for (int i = -100; i <= 100; ++i)
+    sum += i;
+```
+
+从-100加到100，结果等于0.
+
+## Exercise 1.13
+
+> Rewrite the exercises from 1.4.1 (p. 13) using for loops.
+
+**Ex1.9**:
+
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+	int sum = 0;
+	for (int i = 50; i <= 100; ++i)
+		sum += i;
+	std::cout << sum << std::endl;
+	return 0;
+}
+```
+
+**Ex1.10**
+
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+	int sum = 0;
+	for (int i = 10; i >= 0; --i)
+		std::cout << i << ' ';
+	std::cout << std::endl;
+	return 0;
+}
+```
+
+**Ex1.11**
+
+```cpp
+#include <iostream>
+int main(int argc, char *argv[])
+{
+	int num1, num2, k;
+	std::cin >> num1 >> num2;
+	k = abs(num1 - num2);
+	for (int i = 0; i <= k; ++i)
+	{
+		std::cout << num1 << ' ';
+		num1 += (num1 < num2 ? 1 : -1);
+	}
+	return 0;
+}
+```
