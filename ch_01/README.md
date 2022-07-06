@@ -207,3 +207,20 @@ int main(int argc, char *argv[])
 > Write programs that contain the common errors discussed in the box on page 16. Familiarize yourself with the messages the compiler generates.
 
 略
+
+## Exercise 1.16
+
+> Write your own version of a program that prints the sum of a set of integers read from cin.
+
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+	int sum = 0, value = 0;
+	while (std::cin >> value)
+		sum += value;
+	std::cout << "Sum is " << sum << std::endl;
+	return 0;
+}
+```
