@@ -234,3 +234,10 @@ int main(int argc, char *argv[])
 
 > Compile and run the program from this section giving it only equal values as input. Run it again giving it values in which no number is repeated.
 
+![ex1_18](https://github.com/haodayizhia/CppPrimer5/blob/e88ca645e53638b8228844447d442b5add2be9d5/ch_01/ex1_18.png)
+
+## Exercise 1.19
+
+> Revise the program you wrote for the exercises in § 1.4.1 (p. 13) that printed a range of numbers so that it handles input in which the first number is smaller than the second.
+
+见[ex1_11.cpp]()
