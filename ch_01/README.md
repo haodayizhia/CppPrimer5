@@ -224,3 +224,13 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+## Exercise 1.17
+
+> What happens in the program presented in this section if the input values are all equal? What if there are no duplicated values?
+
+如果全部相等那么程序一直处于输入状态，如果不相等输入一个显示一个。
+
+## Exercise 1.18
+
+> Compile and run the program from this section giving it only equal values as input. Run it again giving it values in which no number is repeated.
+
