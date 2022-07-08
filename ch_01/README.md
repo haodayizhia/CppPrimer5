@@ -259,3 +259,5 @@ int main(int argc, char *argv[])
 }
 ```
 结果
+
+![ex1_20](https://github.com/haodayizhia/CppPrimer5/blob/e60c14c2fb0ad25c5bd26bae3ca7443f16e7a7a8/ch_01/ex1_20.png)
