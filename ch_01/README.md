@@ -286,3 +286,34 @@ int main(int argc, char *argv[])
 	}
 }
 ```
+
+## Exercise 1.22
+
+> Write a program that reads several transactions for the same ISBN. Write the sum of all the transactions that were read.
+
+```cpp
+#include <iostream>
+#include "Sales_item.h"
+
+int main(int argc, char *argv[])
+{
+	Sales_item curritem, item;
+	if (std::cin >> curritem)
+	{
+		while (std::cin >> item)
+		{
+			if (curritem.isbn() == item.isbn())
+				curritem += item;
+			else
+			{
+				std::cout << curritem << std::endl;
+				curritem = item;
+			}
+		}
+		std::cout << curritem << std::endl;
+	}
+	else
+		std::cerr << "No data?" << std::endl;
+	return 0;
+}
+```
