@@ -277,13 +277,13 @@ int main(int argc, char *argv[])
 	if (item1.isbn() == item2.isbn())
 	{
 		std::cout << item1 + item2 << std::endl;
-		return 0;
 	}
 	else
 	{
 		std::cerr << "Data must refer to same ISBN" << std::endl;
 		return -1;
 	}
+	return 0;
 }
 ```
 
@@ -343,13 +343,13 @@ int main(int argc, char *argv[])
 			}
 		}
 		std::cout << curritem.isbn() << " occurs " << cnt << " times" << std::endl;
-		return 0;
 	}
 	else
 	{
 		std::cerr << "Nodata?" << std::endl;
 		return -1;
 	}
+	return 0;
 }
 ```
 
@@ -360,3 +360,38 @@ int main(int argc, char *argv[])
 重定向输入infile文件
 
 ![ex1_24](https://github.com/haodayizhia/CppPrimer5/blob/490514a83115d157d21915c56a5e2cdb4e7b07a8/ch_01/ex1_24.png)
+
+## Exercise 1.25
+
+> Using the Sales_item.h header from the Web site, compile and execute the bookstore program presented in this section.
+
+```cpp
+#include <iostream>
+#include "Sales_item.h"
+
+int main(int argc, char *argv[])
+{
+	Sales_item total;
+	if (std::cin >> total)
+	{
+		Sales_item trans;
+		while (std::cin >> trans)
+		{
+			if (total.isbn() == trans.isbn())
+				total += trans;
+			else
+			{
+				std::cout << total << std::endl;
+				total = trans;
+			}
+		}
+		std::cout << total << std::endl;
+	}
+	else
+	{
+		std::cerr << "Nodata?!" << std::endl;
+		return -1;
+	}
+	return 0;
+}
+```
