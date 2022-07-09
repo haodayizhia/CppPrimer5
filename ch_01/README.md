@@ -317,3 +317,40 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+## Exercise 1.23
+
+> Write a program that reads several transactions and counts how many transactions occur for each ISBN.
+
+```cpp
+#include <iostream>
+#include "Sales_item.h"
+
+int main(int argc, char *argv[])
+{
+	Sales_item curritem, item;
+	int cnt = 1;
+	if (std::cin >> curritem)
+	{
+		while (std::cin >> item)
+		{
+			if (item.isbn() == curritem.isbn())
+				++cnt;
+			else
+			{
+				std::cout << curritem.isbn() << " occurs " << cnt << " times" << std::endl;
+				curritem = item;
+			}
+		}
+		std::cout << curritem.isbn() << " occurs " << cnt << " times" << std::endl;
+		return 0;
+	}
+	else
+	{
+		std::cerr << "Nodata?" << std::endl;
+		return -1;
+	}
+}
+```
+
+## Exercise 1.24
