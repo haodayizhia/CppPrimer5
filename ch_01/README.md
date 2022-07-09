@@ -395,3 +395,5 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+
+![ex1_25](https://github.com/haodayizhia/CppPrimer5/blob/a35a8f1b64cb24af0e2d042eebf3f05b0232ddfc/ch_01/ex1_25.png)
