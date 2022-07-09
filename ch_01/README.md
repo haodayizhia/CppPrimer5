@@ -354,3 +354,9 @@ int main(int argc, char *argv[])
 ```
 
 ## Exercise 1.24
+
+> Test the previous program by giving multiple transactions representing multiple ISBNs. The records for each ISBN should be grouped together.
+
+重定向输入infile文件
+
+![ex1_24]()
