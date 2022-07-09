@@ -261,3 +261,28 @@ int main(int argc, char *argv[])
 结果
 
 ![ex1_20](https://github.com/haodayizhia/CppPrimer5/blob/e60c14c2fb0ad25c5bd26bae3ca7443f16e7a7a8/ch_01/ex1_20.png)
+
+## Exercise 1.21
+
+> Write a program that reads two Sales_item objects that have the same ISBN and produces their sum.
+
+```cpp
+#include <iostream>
+#include "Sales_item.h"
+
+int main(int argc, char *argv[])
+{
+	Sales_item item1, item2;
+	std::cin >> item1 >> item2;
+	if (item1.isbn() == item2.isbn())
+	{
+		std::cout << item1 + item2 << std::endl;
+		return 0;
+	}
+	else
+	{
+		std::cerr << "Data must refer to same ISBN" << std::endl;
+		return -1;
+	}
+}
+```
