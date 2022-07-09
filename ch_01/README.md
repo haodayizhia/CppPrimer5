@@ -359,4 +359,4 @@ int main(int argc, char *argv[])
 
 重定向输入infile文件
 
-![ex1_24](https://github.com/haodayizhia/CppPrimer5/blob/2e4788f378ccb6bc9179a07f6ebfc956869ead97/ch_01/ex1_24.png)
+![ex1_24](https://github.com/haodayizhia/CppPrimer5/blob/490514a83115d157d21915c56a5e2cdb4e7b07a8/ch_01/ex1_24.png)
