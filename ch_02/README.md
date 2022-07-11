@@ -15,3 +15,92 @@
 > To calculate a mortgage payment, what types would you use for the rate, principal, and payment? Explain why you selected each type.
 
 浮点型，本金和付款位数较多，选用double，利率可以使用float。
+
+## Exercise 2.3
+
+> What output will the following code produce?
+
+```cpp
+unsigned u = 10, u2 = 42;
+std::cout << u2 - u << std::endl;
+std::cout << u - u2 << std::endl;
+int i = 10, i2 = 42;
+std::cout << i2 - i << std::endl;
+std::cout << i - i2 << std::endl;
+std::cout << i - u << std::endl;
+std::cout << u - i << std::endl;
+```
+
+输出：
+
+```
+32 4294967264 32 -32 0 0
+```
+
+## Exercise 2.4
+
+> Write a program to check whether your predictions were correct. If not, study this section until you understand what the problem is.
+
+略。
+
+## Exercise 2.5
+
+> Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
+>
+> - (a) 'a', L'a', "a", L"a"
+> - (b) 10, 10u, 10L, 10uL, 012, 0xC
+> - (c) 3.14, 3.14f, 3.14L
+> - (d) 10, 10u, 10., 10e-2
+
+(a) `char` 型字面值常量，`wchar_t` 宽字符型字面值，字符串字面值，宽字符型字符串字面值。
+
+(b) 十进制整型字面值，十进制无符号整型字面值，十进制长整型字面值，十进制无符号长整型字面值，八进制整型字面值，十六进制整型字面值。
+
+(c) 双精度浮点型字面值，单精度浮点型字面值，扩展精度浮点型字面值。
+
+(d) 十进制整型字面值，十进制无符号整型字面值，双精度浮点型字面值，双精度浮点型字面值。
+
+## Exercise 2.6
+
+> What, if any, are the differences between the following definitions:
+
+```cpp
+int month = 9, day = 7;
+int month = 09, day = 07;
+```
+
+第一行为十进制，第二行八进制且09不合法。
+
+## Exercise 2.7
+
+> What values do these literals represent? What type does each have?
+>
+> - (a) "Who goes with F\145rgus?\012"
+> - (b) 3.14e1L
+> - (c) 1024f
+> - (d) 3.14L
+
+(a) Who goes with Fergus?（换行）
+
+(b) 31.4，扩展精度浮点型字面值。
+
+(c) 1024，单精度浮点型字面值。
+
+(d) 3.14，扩展精度浮点型字面值。
+
+## Exercise 2.8
+
+> Using escape sequences, write a program to print 2M followed by a newline. Modify the program to print 2, then a tab, then an M, followed by a newline.
+
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+    std::cout << "2M\n" << std::endl;
+    std::cout << "2\t\115\12" << std::endl;
+    return 0;
+}
+```
+
+## Exercise 2.9
