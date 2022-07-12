@@ -151,3 +151,23 @@ double salary = wage = 9999.99
 - `gobal_int` 是一个全局变量，为0。
 - `local_int` 在函数体内部，内置类型不被初始化，值未定义。
 - `local_str` 在函数体内部，但是初始值由类定义，所以为空字符串。
+
+## Exercise 2.11
+
+> Explain whether each of the following is a declaration or a definition:
+> - (a) `extern int ix = 1024;`
+> - (b) `int iy;`
+> - (c) `extern int iz;`
+
+- (a)：定义。
+- (b)：定义。
+- (c)：声明。
+
+## Exercise 2.12
+
+> Which, if any, of the following names are invalid?
+> - (a) `int double = 3.14;`
+> - (b) `int _;`
+> - (c) `int catch-22;`
+> - (d) `int 1_or_2 = 1;`
+> - (e) `double Double = 3.14;`
