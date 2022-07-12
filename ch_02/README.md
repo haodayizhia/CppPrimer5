@@ -104,3 +104,50 @@ int main(int argc, char *argv[])
 ```
 
 ## Exercise 2.9
+
+> Explain the following definitions. For those that are illegal, explain what’s wrong and how to correct it.
+> - (a) `std::cin >> int input_value;`
+> - (b) `int i = { 3.14 };`
+> - (c) `double salary = wage = 9999.99;`
+> - (d) `int i = 3.14;`
+
+(a) expected primary-expression before 'int'.
+
+```cpp
+int input_value;
+std::cin >> input_value;
+```
+
+(b) narrowing conversion of '3.1400000000000001e+0' from 'double' to 'int' inside { } [-Wnarrowing]. 类型转换未执行，存在丢失信息的危险。
+
+```cpp
+double i = { 3.14 };
+```
+
+(c) wage未声明。
+
+```cpp
+double wage;
+double salary = wage = 9999.99
+```
+
+(d) 合法，但是会丢失部分值。
+
+## Exercise 2.10
+
+> What are the initial values, if any, of each of the following variables?
+>
+> ```cpp
+> std::string global_str;
+> int global_int;
+> int main()
+> {
+>     int local_int;
+>     std::string local_str;
+> }
+> ```
+
+- `global_str` 是一个全局变量，为空字符串。
+- `gobal_int` 是一个全局变量，为0。
+- `local_int` 在函数体内部，内置类型不被初始化，值未定义。
+- `local_str` 在函数体内部，但是初始值由类定义，所以为空字符串。
