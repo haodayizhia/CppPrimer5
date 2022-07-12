@@ -171,3 +171,31 @@ double salary = wage = 9999.99
 > - (c) `int catch-22;`
 > - (d) `int 1_or_2 = 1;`
 > - (e) `double Double = 3.14;`
+
+## Exercise 2.13
+
+> What is the value of j in the following program?
+>
+> ```cpp
+> int i = 42;
+> int main()
+> {
+>     int i = 100;
+>     int j = i;
+> }
+> ```
+
+100
+
+## Exercise 2.14
+
+> Is the following program legal? If so, what values are printed?
+
+```cpp
+int i = 100, sum = 0;
+for (int i = 0; i != 10; ++i)
+    sum += i;
+std::cout << i << " " << sum << std::endl;
+```
+
+合法，100，45.
