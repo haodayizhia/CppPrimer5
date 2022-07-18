@@ -199,3 +199,61 @@ std::cout << i << " " << sum << std::endl;
 ```
 
 合法，100，45.
+
+## Exercise 2.14
+
+> Which of the following definitions, if any, are invalid? Why?
+> - (a) `int ival = 1.01;`
+> - (b) `int &rval1 = 1.01;`
+> - (c) `int &rval2 = ival;`
+> - (d) `int &rval3;`
+
+- (a): 合法，但丢失部分值。
+- (b): 不合法，引用的初始值必须是一个对象。
+- (c): 合法。
+- (d): 不合法，引用必须初始化。
+
+## Exercise 2.16
+
+> Which, if any, of the following assignments are invalid? If they are valid, explain what they do.
+>
+> ```cpp
+> int i = 0, &r1 = i;
+> double d = 0, &r2 = d;
+> ```
+>
+> - (a) r2 = 3.14159;
+> - (b) r2 = r1;
+> - (c) i = r2;
+> - (d) r1 = d;
+
+- (a): 合法，d等于3.14159。
+- (b): 合法，类型自动转换。
+- (c): 合法，但是丢失部分值。
+- (d): 合法，但是丢失部分值。
+
+## Exercise 2.17
+
+> What does the following code print?
+>
+> ```cpp
+> int i, &ri = i;
+> i = 5; ri = 10;
+> std::cout << i << " " << ri << std::endl;
+> ```
+
+10, 10
+
+## Exercise 2.18
+
+> Write code to change the value of a pointer. Write code to change the value to which the pointer points.
+
+```cpp
+int a = 0, b = 1;
+int *p1 = &a, *p2 = p1;
+
+// change the value of a pointer.
+p1 = &b;
+// change the value to which the pointer points
+*p2 = b;
+```
