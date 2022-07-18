@@ -249,11 +249,15 @@ std::cout << i << " " << sum << std::endl;
 > Write code to change the value of a pointer. Write code to change the value to which the pointer points.
 
 ```cpp
-int a = 0, b = 1;
-int *p1 = &a, *p2 = p1;
+int a = 0, *p = nullptr;
 
-// change the value of a pointer.
-p1 = &b;
-// change the value to which the pointer points
-*p2 = b;
+// 改变指针的值
+p = &a;
+// 改变指针所指对象的值
+*p = 1;
 ```
+## Exercise 2.19
+
+> Explain the key differences between pointers and references.
+
+指针是一个对象，引用不是一个对象只是别名，所以引用必须初始化而且不能赋值。
