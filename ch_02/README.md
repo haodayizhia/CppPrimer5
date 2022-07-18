@@ -261,3 +261,57 @@ p = &a;
 > Explain the key differences between pointers and references.
 
 指针是一个对象，引用不是一个对象只是别名，所以引用必须初始化而且不能赋值。
+
+## Exercise 2.20
+
+> What does the following program do?
+>
+> ```cpp
+> int i = 42;
+> int *p1 = &i; *p1 = *p1 * *p1;
+> ```
+
+`p1`指向`i`，等于42^2=1764。
+
+## Exercise 2.21
+
+> Explain each of the following definitions. Indicate whether any are illegal and, if so, why.
+>
+> ```cpp
+> int i = 0;
+> ```
+>
+> - (a) `double* dp = &i;`
+> - (b) `int *ip = i;`
+> - (c) `int *p = &i;`
+
+- (a): 非法，类型不匹配。
+- (b): 非法，不能把变量直接赋给指针。
+- (c): 合法。
+
+## Exercise 2.22
+
+> Assuming p is a pointer to int, explain the following code:
+>
+> ```cpp
+> if (p) // p的值为0？
+> if (*p) // p指向的值为0？
+> ```
+
+## Exercise 2.23
+
+> Given a pointer p, can you determine whether p points to a valid object? If so, how? If not, why not?
+
+不能，不知道`p`的值是否指向需要的对象。
+
+## Exercise 2.24
+
+> Why is the initialization of `p` legal but that of `lp` illegal?
+>
+> ```cpp
+> int i = 42;
+> void *p = &i;
+> long *lp = &i;
+> ```
+
+指针指向的类型要和赋值的类型匹配，`void` 指针可以存放任意对象的地址。
