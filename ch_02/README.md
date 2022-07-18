@@ -315,3 +315,15 @@ p = &a;
 > ```
 
 指针指向的类型要和赋值的类型匹配，`void` 指针可以存放任意对象的地址。
+
+## Exercise 2.25
+
+> Determine the types and values of each of the following variables.
+>
+> - (a) `int* ip, i, &r = i;`
+> - (b) `int i, *ip = 0;`
+> - (c) `int* ip, ip2;`
+
+- (a): ip是一个 `int` 型的指针，`i` 是一个`int` 类型，`r` 是一个 `int` 类型的引用。
+- (b): `i` 是一个`int` 类型，`ip` 是一个 `int` 类型的空指针。
+- (c): ip是一个 `int` 型的指针，`ip2` 是一个`int` 类型。
