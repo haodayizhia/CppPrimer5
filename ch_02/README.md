@@ -339,3 +339,42 @@ p = &a;
 > ++cnt;              // 合法
 > ++sz;               // 不合法，常量不能改变。
 > ```
+
+## Exercise 2.27
+
+> Which of the following initializations are legal? Explain why.
+>
+> ```cpp
+> (a) int i = -1, &r = 0;         // 不合法，r必须绑定一个对象。
+> (b) int *const p2 = &i2;        // 不合法，p2是一个普通指针。
+> (c) const int i = -1, &r = 0;   // 合法。
+> (d) const int *const p3 = &i2;  // 合法。
+> (e) const int *p1 = &i2;        // 合法。
+> (f) const int &const r2;        // 不合法，引用必须初始化。
+> (g) const int i2 = i, &r = i;   // 合法。
+> ```
+
+## Exercise 2.28
+
+> Explain the following definitions. Identify any that are illegal.
+>
+> ```cpp
+> (a) int i, *const cp;       // 不合法，常量指针必须初始化。
+> (b) int *p1, *const p2;     // 不合法。
+> (c) const int ic, &r = ic;  // 不合法，常量必须初始化。
+> (d) const int *const p3;    // 不合法。
+> (e) const int *p;           // 合法。
+> ```
+
+## Exercise 2.29
+
+> Using the variables in the previous ## Exercise, which of the following assignments are legal? Explain why.
+>
+> ```cpp
+> (a) i = ic;     // 合法。
+> (b) p1 = p3;    // 不合法，p3指向常量。
+> (c) p1 = &ic;   // 不合法，ic是一个常量。
+> (d) p3 = &ic;   // 不合法，p3是常量指针。
+> (e) p2 = p1;    // 不合法。
+> (f) ic = *p3;   // 不合法。
+> ```
