@@ -327,3 +327,15 @@ p = &a;
 - (a): ip是一个 `int` 型的指针，`i` 是一个`int` 类型，`r` 是一个 `int` 类型的引用。
 - (b): `i` 是一个`int` 类型，`ip` 是一个 `int` 类型的空指针。
 - (c): ip是一个 `int` 型的指针，`ip2` 是一个`int` 类型。
+
+## Exercise 2.26
+
+> Which of the following are legal? For those that are illegal, explain why.
+>
+> ```cpp
+> const int buf;      // 错误，未经初始化。
+> int cnt = 0;        // 合法。
+> const int sz = cnt; // 合法。
+> ++cnt;              // 合法
+> ++sz;               // 不合法，常量不能改变。
+> ```
