@@ -333,11 +333,11 @@ p = &a;
 > Which of the following are legal? For those that are illegal, explain why.
 >
 > ```cpp
-> const int buf;      // 错误，未经初始化。
-> int cnt = 0;        // 合法。
-> const int sz = cnt; // 合法。
-> ++cnt;              // 合法
-> ++sz;               // 不合法，常量不能改变。
+> (a) const int buf;      // 错误，未经初始化。
+> (b) int cnt = 0;        // 合法。
+> (c) const int sz = cnt; // 合法。
+> (d) ++cnt;              // 合法
+>     ++sz;               // 不合法，常量不能改变。
 > ```
 
 ## Exercise 2.27
@@ -377,4 +377,17 @@ p = &a;
 > (d) p3 = &ic;   // 不合法，p3是常量指针。
 > (e) p2 = p1;    // 不合法。
 > (f) ic = *p3;   // 不合法。
+> ```
+
+## Exercise 2.29
+
+> Using the variables in the previous ## Exercise, which of the following assignments are legal? Explain why.
+>
+> ```cpp
+> (a) i = ic;     // 合法。
+> (b) p1 = p3;    // 不合法，p3指向常量而p1指向变量。
+> (c) p1 = &ic;   // 不合法。
+> (d) p3 = &ic;   // 合法。
+> (e) p2 = p1;    // 不合法，p2是一个常量指针。
+> (f) ic = *p3;   // 不合法，ic是一个常量。
 > ```
