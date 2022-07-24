@@ -391,3 +391,42 @@ p = &a;
 > (e) p2 = p1;    // 不合法，p2是一个常量指针。
 > (f) ic = *p3;   // 不合法，ic是一个常量。
 > ```
+
+## Exercise 2.30
+
+> For each of the following declarations indicate whether the object being declared has top-level or low-level `const`.
+>
+> ```cpp
+> const int v2 = 0; int v1 = v2;
+> int *p1 = &v1, &r1 = v1;
+> const int *p2 = &v2, *const p3 = &i, &r2 = v2;
+> ```
+
+- v2是顶层 `const` , p2是底层 `const` 。
+- p3: 右边是顶层 `const` , 左边是底层 `const` 。
+- r2用于声明引用的 `const` 都是底层 `const` 。
+
+## Exercise 2.31
+
+> Given the declarations in the previous ## Exercise determine whether the following assignments are legal. Explain how the top-level or low-level `const` applies in each case.
+>
+> ```cpp
+> r1 = v2; // 合法。
+> p1 = p2; // 不合法，p2包含底层const的定义，而p1没有。
+> p2 = p1; // 合法，int*能转换成const int*。
+> p1 = p3; // 不合法，p3是底层const。
+> p2 = p3; // 合法，具有相同的底层const。
+> ```
+
+## Exercise 2.32
+
+> Is the following code legal or not? If not, how might you make it legal?
+
+```cpp
+int null = 0, *p = null;
+```
+不合法，类型不匹配。
+
+```cpp
+int null = 0, *p = nullptr;
+```
