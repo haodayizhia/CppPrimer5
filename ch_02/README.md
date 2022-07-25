@@ -502,3 +502,38 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+## Exercise 2.36
+
+> In the following code, determine the type of each variable and the value each variable has when the code finishes:
+>
+> ```cpp
+> int a = 3, b = 4;
+> decltype(a) c = a;
+> decltype((b)) d = a;
+> ++c;
+> ++d;
+> ```
+
+`c` 是整型，`d` 是 `a` 的引用，值都等于4。
+
+## Exercise 2.37
+
+> Assignment is an example of an expression that yields a reference type. The type is a reference to the type of the left-hand operand. That is, if i is an int, then the type of the expression `i = x` is `int&`. Using that knowledge, determine the type and value of each variable in this code:
+>
+> ```cpp
+> int a = 3, b = 4;
+> decltype(a) c = a;
+> decltype(a = b) d = a;
+> ```
+
+- `c` 是整型，`d` 是整型引用。
+- `a = 3, b = 4, c = 3, d = 3`
+
+## Exercise 2.38
+
+> Describe the differences in type deduction between `decltype` and `auto`. Give an example of an expression where auto and `decltype` will deduce the same type and an example where they will deduce differing types.
+
+`decltype` 和 `auto` 都是推断变量类型，区别如下：
+- `decltype` 仅推断类型， `auto` 推断类型的同时赋值。
+- `decltype` 可以推断变量的引用和 `const` 属性，而 `auto` 不包含需要手动。
+- `decltype` 的结果类型和表达式密切相关，双层括号必然是引用。
