@@ -430,3 +430,75 @@ int null = 0, *p = null;
 ```cpp
 int null = 0, *p = nullptr;
 ```
+## Exercise 2.33
+
+> Using the variable definitions from this section, determine what happens in each of these assignments:
+>
+> ```cpp
+> a = 42; // 赋值a=42。
+> b = 42; // 赋值b=42。
+> c = 42; // 赋值c=42。
+> d = 42; // 错误，d是一个指针。
+> e = 42; // 错误，e指向常量。
+> g = 42; // 错误，g是一个整型常量引用。
+> ```
+
+## Exercise 2.34
+
+> Write a program containing the variables and assignments from the previous ## Exercise. Print the variables before and after the assignments to check whether your predictions in the previous ## Exercise were correct. If not, study the examples until you can convince yourself you know ￼￼what led you to the wrong conclusion.
+
+运行
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+    int i = 0, &r = i;
+    auto a = r;
+    const int ci = i, &cr = ci;
+    auto b = ci;
+    auto c = cr;
+    auto d = &i;
+    auto e = &ci;
+    const auto f = ci;
+    auto &g = ci;
+    auto &h = 42;
+    const auto &j = 42;
+    //赋值
+    a = 42, b = 42, c = 42, d = 42, e = 42, g = 42;
+    return 0;
+}
+```
+
+## Exercise 2.35
+
+> Determine the types deduced in each of the following definitions. Once you’ve figured out the types, write a program to see whether you were correct.
+>
+> ```cpp
+> const int i = 42;
+> auto j = i;
+> const auto &k = i;
+> auto *p = &i;
+> const auto j2 = i, &k2 = i;
+> ```
+
+- `i` 为整型常量。
+- `j` 为整型。
+- `k` 为整型常量引用。
+- `p` 为整型常量指针。
+- `j2` 为整型常量。
+- `k2` 为整型引用。
+
+```cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+    const int i = 42;
+    auto j = i;
+    const auto &k = i;
+    auto *p = &i;
+    const auto j2 = i, &k2 = i;
+    return 0;
+}
+```
