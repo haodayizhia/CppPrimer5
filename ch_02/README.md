@@ -622,3 +622,11 @@ int main(int argc, char *argv[])
     return -1;
 }
 ```
+## Exercise 2.42
+
+> Write your own version of the `Sales_data.h` header and use it to rewrite the ## Exercise from 2.6.2(p. 76)
+
+- [Sales_data.h](ex2_42_sales_data.h)
+- [1.5.1.](ex2_42_1.cpp)
+- [1.5.2.](ex2_42_2.cpp)
+- [1.6.](ex2_42_3.cpp)
