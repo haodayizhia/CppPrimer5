@@ -556,4 +556,41 @@ int main(int argc, char *argv[])
 
 > Write your own version of the `Sales_data` class.
 
-- [ex_2.40_Sales_data.h](https://github.com/haodayizhia/CppPrimer5/blob/08f28bba4e076081c009811eaf4859767d234880/ch_02/ex_2.40_Sales_data.h)
+```cpp
+#include <string>
+
+class Sales_data
+{
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+```
+
+## Exercise 2.41
+
+> Use your Sales_data class to rewrite the ## Exercises in 1.5.1(p. 22), 1.5.2(p. 24), and 1.6(p. 25). For now, you should define your Sales_data class in the same file as your main function.
+
+### 1.5.1
+
+```cpp
+#include <iostream>
+#include <string>
+
+struct Sale_data {
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+
+int main()
+{
+    Sale_data book;
+    double price;
+    std::cin >> book.bookNo >> book.units_sold >> price;
+    book.revenue = book.units_sold * price;
+    std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << price;
+
+    return 0;
+}
+```
