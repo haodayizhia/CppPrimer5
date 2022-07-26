@@ -577,20 +577,84 @@ class Sales_data
 #include <iostream>
 #include <string>
 
-struct Sale_data {
+class Sales_data
+{
+public:
     std::string bookNo;
     unsigned units_sold = 0;
     double revenue = 0.0;
 };
 
-int main()
+int main(int argc, char *argv[])
 {
-    Sale_data book;
-    double price;
-    std::cin >> book.bookNo >> book.units_sold >> price;
-    book.revenue = book.units_sold * price;
-    std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << price;
+    Sales_data data1, data2;
+    double price = 0.0;
+    std::cin >> data1.bookNo >> data1.units_sold >> price;
+    data1.revenue = data1.units_sold * price;
+    std::cin >> data2.bookNo >> data2.units_sold >> price;
+    data2.revenue = data2.units_sold * price;
+    if (data1.bookNo == data2.bookNo)
+    {
+        unsigned totalCnt = data1.units_sold + data2.units_sold;
+        double totalRevenue = data1.revenue + data2.revenue;
+        // 输出：ISBN、总销量、总销售额
+        std::cout << data1.bookNo << ' ' << totalCnt << ' ' << totalRevenue << ' ';
+        if (totalCnt != 0)
+        {
+            std::cout << totalRevenue / totalCnt << std::endl;
+        }
+        return 0;
+    }
+    else
+    {
+        std::cerr << "Data must refer to the same ISBN" << std::endl;
+    }
+    return -1;
+}
+```
+```cpp
+#include <iostream>
+#include <string>
 
+class Sales_data
+{
+public:
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+
+int main(int argc, char *argv[])
+{
+    Sales_data total, currData;
+    double price = 0.0;
+    // 保存第一个Sales_data
+    if (std::cin >> total.bookNo >> total.units_sold >> price)
+    {
+        total.revenue = total.units_sold * price;
+        // 循环读入
+        while (std::cin >> currData.bookNo >> currData.units_sold >> price)
+        {
+            currData.revenue = currData.units_sold * price;
+            if (currData.bookNo == total.bookNo)
+            {
+                total.units_sold += currData.units_sold;
+                total.revenue += currData.revenue;
+            }
+            else
+            {
+                std::cout << total.bookNo << ' ' << total.units_sold << ' ' << total.revenue << ' ';
+                if (total.units_sold != 0)
+                    std::cout << total.revenue / total.units_sold << std::endl;
+                total.bookNo = currData.bookNo;
+                total.revenue = currData.revenue;
+                total.units_sold = currData.units_sold;
+            }
+        }
+        std::cout << total.bookNo << ' ' << total.units_sold << ' ' << total.revenue << ' ';
+        if (total.units_sold != 0)
+            std::cout << total.revenue / total.units_sold << std::endl;
+    }
     return 0;
 }
 ```
