@@ -627,6 +627,3 @@ int main(int argc, char *argv[])
 > Write your own version of the `Sales_data.h` header and use it to rewrite the ## Exercise from 2.6.2(p. 76)
 
 - [Sales_data.h](https://github.com/haodayizhia/CppPrimer5/blob/90c0ee14d38226fe5f7736d8e34a0bb6153c97f0/ch_02/ex_2.42_Sales_data.h)
-- [1.5.1.](ex2_42_1.cpp)
-- [1.5.2.](ex2_42_2.cpp)
-- [1.6.](ex2_42_3.cpp)
