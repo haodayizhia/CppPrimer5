@@ -556,4 +556,4 @@ int main(int argc, char *argv[])
 
 > Write your own version of the `Sales_data` class.
 
-- [ex_2.40_Sales_data.h](https://github.com/haodayizhia/CppPrimer5/blob/5675c92c13f6b36b057398ebc7b0b1794fe47942/ch_02/Sales_data.h)
+- [ex_2.40_Sales_data.h](https://github.com/haodayizhia/CppPrimer5/blob/08f28bba4e076081c009811eaf4859767d234880/ch_02/ex_2.40_Sales_data.h)
