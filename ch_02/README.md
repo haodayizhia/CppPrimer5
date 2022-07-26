@@ -537,3 +537,23 @@ int main(int argc, char *argv[])
 - `decltype` 仅推断类型， `auto` 推断类型的同时赋值。
 - `decltype` 可以推断变量的引用和 `const` 属性，而 `auto` 不包含需要手动。
 - `decltype` 的结果类型和表达式密切相关，双层括号必然是引用。
+
+## Exercise 2.39
+
+> Compile the following program to see what happens when you forget the semicolon after a class definition. Remember the message for future reference.
+>
+> ```cpp
+> struct Foo { /* empty  */ } // Note: no semicolon
+> int main()
+> {
+>    return 0;
+> }
+> ```
+
+错误信息：expected a ';'
+
+## Exercise 2.40
+
+> Write your own version of the `Sales_data` class.
+
+![Sales_data.h]()
