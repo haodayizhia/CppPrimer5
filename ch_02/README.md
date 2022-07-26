@@ -571,8 +571,6 @@ class Sales_data
 
 > Use your Sales_data class to rewrite the ## Exercises in 1.5.1(p. 22), 1.5.2(p. 24), and 1.6(p. 25). For now, you should define your Sales_data class in the same file as your main function.
 
-### 1.5.1
-
 ```cpp
 #include <iostream>
 #include <string>
@@ -627,6 +625,7 @@ public:
 int main(int argc, char *argv[])
 {
     Sales_data total, currData;
+    int cnt = 1;
     double price = 0.0;
     // 保存第一个Sales_data
     if (std::cin >> total.bookNo >> total.units_sold >> price)
@@ -640,9 +639,11 @@ int main(int argc, char *argv[])
             {
                 total.units_sold += currData.units_sold;
                 total.revenue += currData.revenue;
+                ++cnt;
             }
             else
             {
+                std::cout << total.bookNo << " occur " << cnt << " times " << std::endl;
                 std::cout << total.bookNo << ' ' << total.units_sold << ' ' << total.revenue << ' ';
                 if (total.units_sold != 0)
                     std::cout << total.revenue / total.units_sold << std::endl;
@@ -654,7 +655,8 @@ int main(int argc, char *argv[])
         std::cout << total.bookNo << ' ' << total.units_sold << ' ' << total.revenue << ' ';
         if (total.units_sold != 0)
             std::cout << total.revenue / total.units_sold << std::endl;
+        return 0;
     }
-    return 0;
+    return -1;
 }
 ```
