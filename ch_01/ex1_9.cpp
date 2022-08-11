@@ -1,6 +1,6 @@
 // sum the numbers from 50 to 100 (use while)
-
 #include <iostream>
+
 int main(int argc, char *argv[])
 {
 	int sum = 0, val = 50;
