@@ -68,3 +68,5 @@ int main(int argc, char *argv[])
 	cout << endl;
 	return 0;
 }
+
+// use `using` for 2.6.2
