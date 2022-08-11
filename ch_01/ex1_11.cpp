@@ -1,4 +1,5 @@
 #include <iostream>
+
 int main(int argc, char *argv[])
 {
 	int num1, num2, a;
