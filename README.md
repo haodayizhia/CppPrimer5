@@ -7,7 +7,7 @@
 - [Chapter 1. Getting Started](ch_01/README.md)
 - Part I: The Basics
   - [Chapter 2. Variables and Basic Types](ch_02/README.md)
-  - [Chapter 3. Strings, Vectors, and Arrays](ch03/README.md)
+  - [Chapter 3. Strings, Vectors, and Arrays](ch_03/README.md)
   - [Chapter 4. Expressions](ch04/README.md)
   - [Chapter 5. Statements](ch05/README.md)
   - [Chapter 6. Functions](ch06/README.md)
