@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 		sum += val;
 		++val;
 	}
-	std::cout << "sum of 50 to 100 inclusive is " << sum << std::endl;
+	cout << "sum of 50 to 100 inclusive is " << sum << endl;
 	return 0;
 }
 
@@ -24,15 +24,16 @@ ex1_10
 #include <iostream>
 
 using std::cout; using std::endl;
+
 int main(int argc, char *argv[])
 {
 	int val = 10;
 	while (val >= 0)
 	{
-		std::cout << val << ' ';
+		cout << val << ' ';
 		--val;
 	}
-	std::cout << std::endl;
+	cout << endl;
 	return 0;
 }
 
@@ -44,14 +45,14 @@ using std::cin; using std::cout; using std::endl;
 int main(int argc, char *argv[])
 {
 	int num1, num2, a;
-	std::cout << "Please input two integer number: " << std::endl;
-	std::cin >> num1 >> num2;
+	cout << "Please input two integer number: " << endl;
+	cin >> num1 >> num2;
 	if (num1 >= num2)
 	{
 		a = num2;
 		while (a <= num1)
 		{
-			std::cout << a << ' ';
+			cout << a << ' ';
 			++a;
 		}
 	}
@@ -60,10 +61,10 @@ int main(int argc, char *argv[])
 		a = num1;
 		while (a <= num2)
 		{
-			std::cout << a << ' ';
+			cout << a << ' ';
 			++a;
 		}
 	}
-	std::cout << std::endl;
+	cout << endl;
 	return 0;
 }
