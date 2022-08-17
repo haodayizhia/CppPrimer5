@@ -24,3 +24,18 @@ getline读入包括空白字符在内的字符，到换行符结束。
 没有区别，推断出来也是 `char` 类型。
 
 ## [Exercise 3.8](ex3_08.cpp)
+
+范围for更好，使用简便，不用担心使用下标超出范围。
+
+## Exercise 3.9
+
+>What does the following program do? Is it valid? If not, why not?
+
+```cpp
+string s;
+cout << s[0] << endl;
+```
+
+不合法，s为空，s[0]的结果未定义。
+
+## [Exercise 3.10](ex3_10.cpp)
