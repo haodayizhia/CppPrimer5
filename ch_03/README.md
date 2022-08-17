@@ -14,3 +14,5 @@ getline读入包括空白字符在内的字符，到换行符结束。
 ## Exercise 3.4 : [part1](ex3_04a.cpp) | [part2](ex3_04b.cpp)
 
 ## Exercise 3.5 : [part1](ex3_05a.cpp) | [part2](ex3_05b.cpp)
+
+## [Exercise 3.6](ex3_06.cpp)
