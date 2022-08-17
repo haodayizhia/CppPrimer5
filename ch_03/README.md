@@ -39,3 +39,13 @@ cout << s[0] << endl;
 不合法，s为空，s[0]的结果未定义。
 
 ## [Exercise 3.10](ex3_10.cpp)
+
+## Exercise 3.11
+
+>Is the following range for legal? If so, what is the type of c?
+
+```cpp
+const string s = "Keep out!";
+for (auto &c : s){/*... */}
+```
+c的类型为 `const char &` ，如果改变了c的值则不合法。
