@@ -49,3 +49,28 @@ const string s = "Keep out!";
 for (auto &c : s){/*... */}
 ```
 c的类型为 `const char &` ，如果改变了c的值则不合法。
+
+## Exercise 3.12
+
+>Which, if any, of the following vector definitions are in error?
+For those that are legal, explain what the definition does.
+For those that are not legal, explain why they are illegal.
+
+```cpp
+vector<vector<int>> ivec;         // 合法(c++11)，旧版用vector<vector<int> > ivec。
+vector<string> svec = ivec;       // 不合法，类型不匹配。
+vector<string> svec(10, "null");  // 合法，10个值为"null"的string。
+```
+
+## Exercise 3.13
+
+>How many elements are there in each of the following vectors? What are the values of the elements?
+
+```cpp
+vector<int> v1;         // 空。
+vector<int> v2(10);     // 10个0。
+vector<int> v3(10, 42); // 10个42。
+vector<int> v4{10};     // 1个10。
+vector<int> v5{10, 42}; // 10和42。
+vector<string> v6{10};  // 10个空。
+vector<string> v7{10, "hi"};  // 10个"hi"。
