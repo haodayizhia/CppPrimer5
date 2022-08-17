@@ -74,3 +74,6 @@ vector<int> v4{10};     // 1个10。
 vector<int> v5{10, 42}; // 10和42。
 vector<string> v6{10};  // 10个空。
 vector<string> v7{10, "hi"};  // 10个"hi"。
+```
+
+## [Exercise 3.14](ex3_14.cpp)
