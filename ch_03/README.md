@@ -16,3 +16,11 @@ getline读入包括空白字符在内的字符，到换行符结束。
 ## Exercise 3.5 : [part1](ex3_05a.cpp) | [part2](ex3_05b.cpp)
 
 ## [Exercise 3.6](ex3_06.cpp)
+
+## Exercise 3.7
+
+> What would happen if you define the loop control variable in the previous exercise as type char? Predict the results and then change your program to use a char to see if you were right.
+
+没有区别，推断出来也是 `char` 类型。
+
+## [Exercise 3.8](ex3_08.cpp)
