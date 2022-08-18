@@ -79,3 +79,5 @@ vector<string> v7{10, "hi"};  // 10个"hi"。
 ## [Exercise 3.14](ex3_14.cpp)
 
 ## [Exercise 3.15](ex3_15.cpp)
+
+## [Exercise 3.16](ex3_16.cpp)
