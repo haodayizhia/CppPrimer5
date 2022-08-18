@@ -81,3 +81,21 @@ vector<string> v7{10, "hi"};  // 10个"hi"。
 ## [Exercise 3.15](ex3_15.cpp)
 
 ## [Exercise 3.16](ex3_16.cpp)
+
+## [Exercise 3.17](ex3_17.cpp)
+
+## [Exercise 3.18](ex3_18.cpp)
+
+## [Exercise 3.19](ex3_19.cpp)
+
+## [Exercise 3.20](ex3_20.cpp)
+
+## [Exercise 3.21](ex3_21.cpp)
+
+## [Exercise 3.22](ex3_22.cpp)
+
+## [Exercise 3.23](ex3_23.cpp)
+
+## [Exercise 3.24](ex3_24.cpp)
+
+## [Exercise 3.25](ex3_25.cpp)
