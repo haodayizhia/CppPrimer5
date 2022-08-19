@@ -88,6 +88,14 @@ vector<string> v7{10, "hi"};  // 10个"hi"。
 
 ## [Exercise 3.19](ex3_19.cpp)
 
+第一种最好，理由如下：
+
+- 简洁方便
+
+- 直接构造，不占内存
+
+- 不会溢出
+
 ## [Exercise 3.20](ex3_20.cpp)
 
 ## [Exercise 3.21](ex3_21.cpp)
