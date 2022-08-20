@@ -167,3 +167,9 @@ for (size_t ix = 1; ix <= array_size; ++ix)
 ## [Exercise 3.31](ex3_31.cpp)
 
 ## [Exercise 3.32](ex3_32.cpp)
+
+## Exercise 3.33
+
+>What would happen if we did not initialize the scores array in the program on page 104?
+
+值未定义。
