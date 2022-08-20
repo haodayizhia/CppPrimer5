@@ -107,3 +107,10 @@ vector<string> v7{10, "hi"};  // 10个"hi"。
 ## [Exercise 3.24](ex3_24.cpp)
 
 ## [Exercise 3.25](ex3_25.cpp)
+
+## Exercise 3.26
+
+>In the binary search program on page 112,
+why did we write `mid=beg+(end-beg)/2;` instead of `mid=(beg+end) /2;`?
+
+迭代器没有定义加法。
