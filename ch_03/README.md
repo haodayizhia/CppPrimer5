@@ -129,3 +129,25 @@ int ia[4 * 7 - 14]; // 合法。
 int ia[txt_size()]; // 非法。
 char st[11] = "fundamental";  // 非法，字符串字面值初始化数组会在尾部加一个空字符，空间不够。
 ```
+## Exercise 3.28
+
+>What are the values in the following arrays?
+
+```cpp
+string sa[10];  // 空字符串
+int ia[10];     // 函数外默认初始化0
+
+int main() {
+  string sa2[10];   // 空字符串
+  int ia2[10];      // 未定义
+}
+```
+
+## Exercise 3.29
+
+>List some of the drawbacks of using an array instead of a vector.
+
+- 初始化和赋值不方便。
+- 不够灵活，不能改变大小。
+- 没有迭代器，可能超出范围。
+- 没有基于迭代器的算法，功能不丰富。
