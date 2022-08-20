@@ -151,3 +151,19 @@ int main() {
 - 不够灵活，不能改变大小。
 - 没有迭代器，可能超出范围。
 - 没有基于迭代器的算法，功能不丰富。
+
+## Exercise 3.30
+
+>Identify the indexing errors in the following code:
+
+```cpp
+constexpr size_t array_size = 10;
+int ia[array_size];
+for (size_t ix = 1; ix <= array_size; ++ix)
+      ia[ix] = ix;
+```
+数组下标越界。
+
+## [Exercise 3.31](ex3_31.cpp)
+
+## [Exercise 3.32](ex3_32.cpp)
