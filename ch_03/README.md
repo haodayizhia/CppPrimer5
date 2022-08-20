@@ -114,3 +114,18 @@ vector<string> v7{10, "hi"};  // 10个"hi"。
 why did we write `mid=beg+(end-beg)/2;` instead of `mid=(beg+end) /2;`?
 
 迭代器没有定义加法。
+
+## Exercise 3.27
+
+>Assuming txt_size is a function that takes no arguments
+and returns an int value, which of the following definitions are illegal?
+Explain why.
+
+```cpp
+unsigned buf_size = 1024;
+
+int ia[buf_size];   // 非法，数组的维度必须是常数。
+int ia[4 * 7 - 14]; // 合法。
+int ia[txt_size()]; // 非法。
+char st[11] = "fundamental";  // 非法，字符串字面值初始化数组会在尾部加一个空字符，空间不够。
+```
