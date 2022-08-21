@@ -183,3 +183,7 @@ Are there values of p1 or p2 that make this code illegal?
 p1 += p2 - p1;
 ```
 让p1等于p2，合法。
+
+## [Exercise 3.35](ex3_35.cpp)
+
+## [Exercise 3.36](ex3_36.cpp)
