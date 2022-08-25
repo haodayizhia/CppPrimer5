@@ -187,3 +187,27 @@ p1 += p2 - p1;
 ## [Exercise 3.35](ex3_35.cpp)
 
 ## [Exercise 3.36](ex3_36.cpp)
+
+## Exercise 3.37
+
+>What does the following program do?
+
+```cpp
+const char ca[] = {'h', 'e', 'l', 'l', 'o'};
+const char *cp = ca;
+while (*cp) {
+    cout << *cp << endl;
+    ++cp;
+}
+```
+定义一个c风格字符串ca，把ca首元素指针赋值给cp，打印数组所有非空字符。
+
+## Exercise 3.38
+
+>In this section, we noted that it was not only illegal but meaningless to try to add two pointers. Why would adding two pointers be meaningless?
+
+指针相减可以得到它们之间要移动多少，而相加的值不能用来访问指定的对象，所以没有意义。
+
+## [Exercise 3.39](ex3_39.cpp)
+
+## [Exercise 3.40](ex3_40.cpp)
