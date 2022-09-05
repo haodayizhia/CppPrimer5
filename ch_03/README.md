@@ -211,3 +211,13 @@ while (*cp) {
 ## [Exercise 3.39](ex3_39.cpp)
 
 ## [Exercise 3.40](ex3_40.cpp)
+
+## [Exercise 3.41](ex3_41.cpp)
+
+## [Exercise 3.42](ex3_42.cpp)
+
+## [Exercise 3.43](ex3_43.cpp)
+
+## [Exercise 3.44](ex3_44.cpp)
+
+## [Exercise 3.45](ex3_45.cpp)
