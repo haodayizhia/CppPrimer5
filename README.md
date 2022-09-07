@@ -8,7 +8,7 @@
 - Part I: The Basics
   - [Chapter 2. Variables and Basic Types](ch_02/README.md)
   - [Chapter 3. Strings, Vectors, and Arrays](ch_03/README.md)
-  - [Chapter 4. Expressions](ch04/README.md)
+  - [Chapter 4. Expressions](ch_04/README.md)
   - [Chapter 5. Statements](ch05/README.md)
   - [Chapter 6. Functions](ch06/README.md)
   - [Chapter 7. Classes](ch07/README.md)
