@@ -113,3 +113,49 @@ a > b && b > c && c > d
 > Assuming `i`, `j`, and `k` are all ints, explain what `i != j < k` means.
 
 `i != (j < k)` ，把 `j` 和 `k` 比较结果的布尔值与i比较判断是否相等。
+
+## Exercise 4.13
+
+> What are the values of i and d after each assignment?
+>
+> ```cpp
+> int i;   double d;
+> d = i = 3.5; // i = 3, d = 3.0
+> i = d = 3.5; // d = 3.5, i = 3
+> ```
+
+## Exercise 4.14
+
+> Explain what happens in each of the if tests:
+>
+> ```cpp
+> if (42 = i)   // 错误，赋值运算符左侧要为可以改变的左值
+> if (i = 42)   // 真
+> ```
+
+## Exercise 4.15
+
+> The following assignment is illegal. Why? How would you correct it?
+>
+> ```cpp
+> double dval; int ival; int *pi;
+> dval = ival = pi = 0;
+> // pi为空指针
+> // 不存在从指针类型到整型的转换
+> // 改正：
+> dval = ival = 0;
+> pi = 0;
+> ```
+
+## Exercise 4.16
+
+> Although the following are legal, they probably do not behave as the programmer expects. Why? Rewrite the expressions as you think they should be.
+>
+> ```cpp
+> if (p = getPtr() != 0)
+> if (i = 1024)
+> // 结合顺序和等号作为条件
+> // 改正：
+> if ((p = getPtr()) != 0)
+> if (i == 1024)
+> ```
