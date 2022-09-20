@@ -217,3 +217,13 @@ a > b && b > c && c > d
 ```cpp
 string pl = s + (s[s.size() - 1] == 's' ? "" : "s") ;
 ```
+
+## Exercise 4.24
+
+> Our program that distinguished between high pass, pass, and fail depended on the fact that the conditional operator is right associative. Describe how that operator would be evaluated if the operator were left associative.
+
+如果是左结合
+
+```cpp
+finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
+```
