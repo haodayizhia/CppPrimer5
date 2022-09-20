@@ -159,3 +159,27 @@ a > b && b > c && c > d
 > if ((p = getPtr()) != 0)
 > if (i == 1024)
 > ```
+
+## Exercise 4.17
+
+> Explain the difference between prefix and postfix increment.
+
+前置递增运算符先递增然后将对象本身作为左值返回，后置运算符对象原始值的副本作为右值返回然后递增。
+
+## Exercise 4.18
+
+> What would happen if the while loop on page 148 that prints the elements from a vector used the prefix increment operator?
+
+如果没有负值会解引用一个不存在的元素，出现未定义的错误。
+
+## Exercise 4.19
+
+> Given that `ptr` points to an `int`, that `vec` is a `vector<int>`, and that `ival` is an `int`, explain the behavior of each of these expressions. Which, if any, are likely to be incorrect? Why? How might each be corrected?
+>
+> ```cpp
+> ptr != 0 && *ptr++  // 如果ptr不为空指针且值不为0，递增ptr，真
+> ival++ && ival // 如果ival不为0，递增ival，如果也不为0，真
+> vec[ival++] <= vec[ival] // 错误，左侧改变了ival的值，右侧又用到了ival，
+> // correct:
+> vec[ival] <= vec[ival+1]
+> ```
