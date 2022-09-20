@@ -183,3 +183,20 @@ a > b && b > c && c > d
 > // correct:
 > vec[ival] <= vec[ival+1]
 > ```
+
+## Exercise 4.20
+
+> Assuming that iter is a `vector<string>::iterator`, indicate which, if any, of the following expressions are legal. Explain the behavior of the legal expressions and why those that aren’t legal are in error.
+>
+> ```cpp
+> *iter++;  // 返回*iter，指针递增。
+> (*iter)++;  // 不合法，string类型不能++。
+> *iter.empty() // 不合法，(*iter).empty()或iter->empty()。
+> iter->empty();  // 判断iter所指字符串是否为空。
+> ++*iter;        // 不合法。
+> iter++->empty();  // 返回iter->empty()，指针递增。
+> ```
+
+## [Exercise 4.21](ex4_21.cpp)
+
+## [Exercise 4.22](ex4_22.cpp)
