@@ -200,3 +200,20 @@ a > b && b > c && c > d
 ## [Exercise 4.21](ex4_21.cpp)
 
 ## [Exercise 4.22](ex4_22.cpp)
+
+## Exercise 4.23
+
+> The following expression fails to compile due to operator precedence. Using Table 4.12 (p. 166), explain why it fails. How would you fix it?
+>
+> ```cpp
+> string s = "word";
+> string pl = s + s[s.size() - 1] == 's' ? "" : "s" ;
+> ```
+
+条件运算符的优先级低。
+
+修改：
+
+```cpp
+string pl = s + (s[s.size() - 1] == 's' ? "" : "s") ;
+```
