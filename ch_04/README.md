@@ -227,3 +227,26 @@ string pl = s + (s[s.size() - 1] == 's' ? "" : "s") ;
 ```cpp
 finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 ```
+## Exercise 4.25
+
+> What is the value of `~'q' << 6` on a machine with 32-bit `int`s and 8 bit `char`s, that uses Latin-1 character set in which '`q`' has the bit pattern `01110001`?
+
+首先， `char` 类型提升为 `int` ， `00000000 00000000 00000000 01110001` ，然后取反左移6位，为 `11111111 11111111 11100011 10000000`，等于-7296。
+
+## Exercise 4.26
+
+> In our grading example in this section, what would happen if we used unsigned int as the type for quiz1?
+
+30个学生，用 `unsigned int` 只有16位，结果未定义。
+
+## Exercise 4.27
+
+> What is the result of each of these expressions?
+>
+> ```cpp
+> unsigned long ul1 = 3, ul2 = 7;
+> ul1 & ul2 // == 3
+> ul1 | ul2 // == 7
+> ul1 && ul2 // == true
+> ul1 || ul2 // == ture
+> ```
