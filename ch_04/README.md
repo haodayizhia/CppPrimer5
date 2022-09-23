@@ -264,3 +264,14 @@ finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 > ```
 
 第一个结果为10，第二个在64位机器上为2，在32位机器上为1。
+
+## Exercise 4.30
+
+> Using Table 4.12 (p. 166), parenthesize the following expressions to match the default evaluation:
+>
+> ```cpp
+> sizeof x + y      // (sizeof x)+y . "sizeof" has higher precedence than binary`\+`.
+> sizeof p->mem[i]  // sizeof(p->mem[i])
+> sizeof a < b      // sizeof(a) < b
+> sizeof f()        // if`f()`returns`void`, this statement is undefined, otherwise it returns the size of return type.
+> ```
