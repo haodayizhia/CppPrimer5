@@ -252,3 +252,15 @@ finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 > ```
 
 ## [Exercise 4.28](ex4_28.cpp)
+
+## Exercise 4.29
+
+> Predict the output of the following code and explain your reasoning. Now run the program. Is the output what you expected? If not, figure out why.
+>
+> ```cpp
+> int x[10];   int *p = x;
+> cout << sizeof(x)/sizeof(*x) << endl;
+> cout << sizeof(p)/sizeof(*p) << endl;
+> ```
+
+第一个结果为10，第二个在64位机器上为2，在32位机器上为1。
