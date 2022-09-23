@@ -251,4 +251,4 @@ finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 > ul1 || ul2 // == ture
 > ```
 
-## [Exercise 4.28]()
+## [Exercise 4.28](ch_04/ex4_28.cpp)
