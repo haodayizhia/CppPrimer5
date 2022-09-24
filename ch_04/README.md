@@ -275,3 +275,33 @@ finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 > sizeof a < b      // sizeof(a) < b
 > sizeof f()        // if`f()`returns`void`, this statement is undefined, otherwise it returns the size of return type.
 > ```
+
+## Exercise 4.31
+
+> The program in this section used the prefix increment and decrement operators. Explain why we used prefix and not postfix. What changes would have to be made to use the postfix versions? Rewrite the program using postfix operators.
+
+没有区别，建议用前置，可能效率更高。
+
+## Exercise 4.32
+
+> Explain the following loop.
+>
+> ```cpp
+> constexpr int size = 5;
+> int ia[size] = {1,2,3,4,5};
+> for (int *ptr = ia, ix = 0;
+>     ix != size && ptr != ia+size;
+>     ++ix, ++ptr) { /* ... */ }
+> ```
+
+`ptr` 指针和 `ix` 下标随整型数组遍历递增。
+
+## Exercise 4.33
+
+> Using Table 4.12 (p. 166) explain what the following expression does:
+>
+> ```cpp
+> someValue ? ++x, ++y : --x, --y
+> ```
+
+如果结果为真， `++x, ++y` ，返回 `++y` 的值；如果结果为假，反之。
