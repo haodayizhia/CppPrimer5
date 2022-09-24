@@ -305,3 +305,65 @@ finalgrade = ((grade > 90) ? "high pass" : (grade < 60)) ? "fail" : "pass";
 > ```
 
 如果结果为真， `++x, ++y` ，返回 `++y` 的值；如果结果为假，反之。
+
+## Exercise 4.34
+
+> Given the variable definitions in this section, explain what conversions take place in the following expressions:
+>
+> (a) if (fval)
+> (b) dval = fval + ival;
+> (c) dval + ival * cval;
+
+Remember that you may need to consider the associativity of the operators.
+
+```cpp
+if (fval) // float转换为bool
+dval = fval + ival; // int转换为float，然后相加的结构转换为double
+dval + ival * cval; // char转换为int，然后乘积转换为double
+```
+## Exercise 4.35
+
+> Given the following definitions,
+>
+> ```cpp
+> char cval; int ival; unsigned int ui; float fval; double dval;
+> ```
+>
+> identify the implicit type conversions, if any, taking place:
+>
+> ```cpp
+> cval = 'a' + 3; // 字符字面值常量转换为int，然后结果转换为char
+> fval = ui - ival * 1.0; // int转换为double，unsigned int同样转换为double，结果转换为float（损失精度）
+> dval = ui * fval; // unsigned int转换为float，然后float转换为double
+> cval = ival + fval + dval;  // int转换为float，然后float转换为double，最后转换为char
+> ```
+
+## Exercise 4.36
+
+> Assuming i is an int and d is a double write the expression `i *= d` so that it does integral, rather than floating-point, multiplication.
+
+```cpp
+i *= static_cast<int>(d);
+```
+
+## Exercise 4.37
+
+> Rewrite each of the following old-style casts to use a named cast:
+>
+> ```cpp
+> int i; double d; const string *ps; char *pc; void *pv;
+> pv = (void*)ps; // pv = const_cast<string*>(ps); or pv = static_cast<void*>(const_cast<string*>(ps));
+> i = int(*pc);   // i = static_cast<int>(*pc);
+> pv = &d;        // pv = static_cast<void*>(&d);
+> pc = (char*)pv; // pc = reinterpret_cast<char*>(pv);
+> ```
+  
+  ## Exercise 4.38
+
+> Explain the following expression:
+>
+> ```cpp
+> double slope = static_cast<double>(j/i);
+> ```
+
+把整型的 `j/i` 转换为双精度类型，赋值给slope。
