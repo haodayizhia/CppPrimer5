@@ -80,3 +80,43 @@ if (!status) {/* ... */}
 ## [Exercise 5.5](ex5_05.cpp)
 
 ## [Exercise 5.6](ex5_06.cpp)
+
+## Exercise 5.7
+
+>Correct the errors in each of the following code fragments:
+
+```cpp
+(a) if (ival1 != ival2) ival1 = ival2
+    else ival1 = ival2 = 0;
+(b) if (ival < minval) minval = ival;
+    occurs = 1;
+(c) if (int ival = get_value())
+    cout << "ival = " << ival << endl;
+    if (!ival)
+    cout << "ival = 0\n";
+(d) if (ival = 0)
+    ival = get_value();
+```
+
+```cpp
+(a) if (ival1 != ival2) ival1 = ival2; // 缺少分号
+    else ival1 = ival2 = 0;
+(b) if (ival < minval)
+    {
+        minval = ival;
+        occurs = 1;
+    }
+(c) int val;
+    if (ival = get_value())
+        cout << "ival = " << ival << endl;
+    if (!ival)
+        cout << "ival = 0\n";
+(d) if (ival == 0)
+    ival = get_value();
+```
+
+## Exercise 5.8
+
+>What is a “dangling else”? How are else clauses resolved in C++?
+
+悬垂else指if语句嵌套时，当if多于else的情况下else与if的匹配问题。在c++中，else与离它最近的尚未匹配的if匹配。
