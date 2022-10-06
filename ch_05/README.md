@@ -53,3 +53,27 @@ int main()
 ```
 
 降低了可读性。
+
+## Exercise 5.4
+
+>Explain each of the following examples, and correct any problems you detect.
+> ```cpp
+> - (a) while (string::iterator iter != s.end()) { /* . . . */ }
+> - (b) while (bool status = find(word)) { /* . . . */ }
+>         if (!status) { /* . . . */ }
+> ```
+
+(a) 迭代器iter没有初始化为空。
+
+```cpp
+std::string::iterator iter = s.begin();
+    while (iter != s.end()) { /* . . . */ }
+```
+
+(b) if语句在循环体外，超出status变量的作用范围。
+
+```cpp
+bool status;
+while ((status = find(word))) {/* ... */}
+if (!status) {/* ... */}
+```
