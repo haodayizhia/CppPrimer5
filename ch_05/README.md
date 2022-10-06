@@ -77,3 +77,6 @@ bool status;
 while ((status = find(word))) {/* ... */}
 if (!status) {/* ... */}
 ```
+## [Exercise 5.5](ex5_05.cpp)
+
+## [Exercise 5.6](ex5_06.cpp)
