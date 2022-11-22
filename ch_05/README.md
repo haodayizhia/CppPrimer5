@@ -120,3 +120,11 @@ if (!status) {/* ... */}
 >What is a “dangling else”? How are else clauses resolved in C++?
 
 悬垂else指if语句嵌套时，当if多于else的情况下else与if的匹配问题。在c++中，else与离它最近的尚未匹配的if匹配。
+
+## [Exercise 5.9](ex5_09.cpp)
+
+## [Exercise 5.10](ex5_10.cpp)
+
+## [Exercise 5.11](ex5_11.cpp)
+
+## [Exercise 5.12](ex5_12.cpp)
