@@ -236,3 +236,26 @@ how now now now brown cow cow
 the output should indicate that the word now occurred three times.
 
 - [Exercise 5.14](ex5_14.cpp)
+
+## Exercise 5.15
+
+>Explain each of the following loops. Correct any problems you detect.
+
+```cpp
+(a) for (int ix = 0; ix != sz; ++ix) { /* ... */ }
+    if (ix != sz)
+    // . . .
+(b) int ix;
+    for (ix != sz; ++ix) { /* ... */ }
+(c) for (int ix = 0; ix != sz; ++ix, ++sz) { /*...*/ }
+```
+
+```cpp
+(a) int ix;
+    for (ix = 0; ix != sz; ++ix)  { /* ... */ }
+    if (ix != sz)
+    // . . .
+(b) int ix;
+    for (; ix != sz; ++ix) { /* ... */ }
+(c) for (int ix = 0; ix != sz; ++ix) { /*...*/ }
+```
