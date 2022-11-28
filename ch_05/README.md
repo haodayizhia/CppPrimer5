@@ -288,3 +288,34 @@ the output should indicate that the word now occurred three times.
         ival = get_response();
     } while (ival); // 条件部分使用的变量必须定义在循环体之外
 ```
+## [Exercise 5.19](ex5_19.cpp)
+
+## [Exercise 5.20](ex5_20.cpp)
+
+## [Exercise 5.21](ex5_21.cpp)
+
+## Exercise 5.22
+
+>The last example in this section that jumped back to begin could be better written using a loop. Rewrite the code to eliminate the goto.
+
+```cpp
+// backward jump over an initialized variable definition is okay
+begin:
+    int sz = get_size();
+    if (sz <= 0) {
+        goto begin;
+    }
+```
+
+use `for` to replace `goto`:
+
+```cpp
+for (int sz = get_size(); sz <=0; sz = get_size())
+    ; // should not remove.
+```
+
+## [Exercise 5.23](ex5_23.cpp)
+
+## [Exercise 5.24](ex5_24.cpp)
+
+## [Exercise 5.25](ex5_25.cpp)
