@@ -267,3 +267,24 @@ the output should indicate that the word now occurred three times.
 略。
 
 ## [Exercise 5.17](ex5_17.cpp)
+
+## Exercise 5.18
+
+>Explain each of the following loops. Correct any problems you detect.
+
+```cpp
+(a) do { // 缺少{}
+        int v1, v2;
+        cout << "Please enter two numbers to sum:" ;
+        if (cin >> v1 >> v2)
+            cout << "Sum is: " << v1 + v2 << endl;
+    }while (cin);
+(b) int ival;
+    do {
+        // . . .
+    } while (ival = get_response()); // 条件部分不允许定义变量
+(c) int ival = get_response();
+    do {
+        ival = get_response();
+    } while (ival); // 条件部分使用的变量必须定义在循环体之外
+```
