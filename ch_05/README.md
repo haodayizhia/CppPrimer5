@@ -313,11 +313,14 @@ use `for` to replace `goto`:
 for (int sz = get_size(); sz <=0; sz = get_size())
     ; // should not remove.
 ```
+
 ```cpp
 \\ while version
 int sz;
 while ((sz = get_size()) < 0)
-;
+    ;
+```
+
 ## [Exercise 5.23](ex5_23.cpp)
 
 ## [Exercise 5.24](ex5_24.cpp)
