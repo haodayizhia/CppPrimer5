@@ -315,7 +315,7 @@ for (int sz = get_size(); sz <=0; sz = get_size())
 ```
 
 ```cpp
-\\ while version
+// while version
 int sz;
 while ((sz = get_size()) < 0)
     ;
