@@ -37,3 +37,12 @@ int main()
 ```
 
 ## [Exercise 6.4](ex6_04.cpp)
+
+## Exercise 6.5
+
+```cpp
+template <typename T>
+T abs(T i) {
+    return i > 0 ? i : -i;
+}
+```
