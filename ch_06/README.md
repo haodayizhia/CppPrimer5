@@ -81,3 +81,9 @@ int test() {
 ## [Exercise 6.8](Chapter6.h)
 
 ## Exercise 6.9 [fact.cc](fact.cc) | [factMain.cc](factMain.cc)
+
+## [Exercise 6.10](ex6_10.cpp)
+
+## [Exercise 6.11](ex6_11.cpp)
+
+## [Exercise 6.12](ex6_12.cpp)
