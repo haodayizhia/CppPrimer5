@@ -87,3 +87,26 @@ int test() {
 ## [Exercise 6.11](ex6_11.cpp)
 
 ## [Exercise 6.12](ex6_12.cpp)
+
+## Exercise 6.13
+
+`void f(T)` 值传递， **对形参的改变不影响实参的值**。
+`void f(T&)` 引用传递， 形参绑定实参。
+
+## Exercise 6.14
+
+形参应该是引用：
+
+```cpp
+void example1(ostream& out) { out << "pass by reference" << endl; }
+```
+
+形参不能是引用：
+
+```cpp
+void print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+        for (; begin != end; ++begin)
+                std::cout << *begin << std::endl;
+}
+```
