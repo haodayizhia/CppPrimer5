@@ -110,3 +110,17 @@ void print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
                 std::cout << *begin << std::endl;
 }
 ```
+
+## Exercise 6.15
+
+>why is `s` a reference to const but `occurs` is a plain reference?
+
+因为 `s` 的值不应该被改变，而 `occurs` 是额外的引用实参，用来保存字符出现的次数。
+
+>Why are these parameters references, but the char parameter `c` is not?
+
+`c` 为单个字符，用值传递就可以。
+
+>What would happen if we made `s` a plain reference? What if we made `occurs` a reference to const?
+
+`s` 可以为普通引用，但用常量引用更安全，如果 `occurs` 为常量引用无法传递次数。
