@@ -161,3 +161,9 @@ vector<int>::iterator change_val(int, vector<int>::iterator);
 ## Exercise 6.20
 
 不需要改变实参的值时尽量用常量引用。函数适用范围变窄，不能传递常量实参或字面值常量，可能改变实参的值。
+
+## [Exercise 6.21](ex6_21.cpp)
+
+## [Exercise 6.22](ex6_22.cpp)
+
+## [Exercise 6.23](ex6_23.cpp)
