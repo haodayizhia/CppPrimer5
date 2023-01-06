@@ -136,3 +136,28 @@ bool is_empty(const string& s) { return s.empty(); }
 ## [Exercise 6.17](ex6_17.cpp)
 
 不同，前者不需要改变实参，后者需要。
+
+## Exercise 6.18
+
+(a)
+
+```cpp
+bool compare(const matrix &m1, const matrix &m2);
+```
+
+(b)
+
+```cpp
+vector<int>::iterator change_val(int, vector<int>::iterator);
+```
+
+## Exercise 6.19
+
+(a) 不合法，只有一个参数。
+(b) 合法。
+(c) 合法。
+(d) 合法。
+
+## Exercise 6.20
+
+不需要改变实参的值时尽量用常量引用。函数适用范围变窄，不能传递常量实参或字面值常量，可能改变实参的值。
