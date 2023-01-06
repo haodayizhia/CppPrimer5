@@ -3,6 +3,11 @@
 
 using namespace std;
 
+void print(const int i)
+{
+    cout << i << endl;
+}
+
 void print(const char p[]) {
     if (p)
         while (*p) cout << *p++;
@@ -26,7 +31,8 @@ void print(const T (&arr)[U]) {
 }
 
 int main(int argc, char *argv[]) {
-    int ivec[3] = {1, 2, 3};
-    print(ivec, 3);
+    int i = 0, j[2] = {0, 1};
+    print(i);
+    print(j);
     return 0;
 }
