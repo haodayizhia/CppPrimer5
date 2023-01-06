@@ -133,4 +133,4 @@ void print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 bool is_empty(const string& s) { return s.empty(); }
 ```
 
-## [Exercise 6.16](ex6_16.cpp)
+## [Exercise 6.17](ex6_17.cpp)
