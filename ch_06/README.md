@@ -134,3 +134,5 @@ bool is_empty(const string& s) { return s.empty(); }
 ```
 
 ## [Exercise 6.17](ex6_17.cpp)
+
+不同，前者不需要改变实参，后者需要。
