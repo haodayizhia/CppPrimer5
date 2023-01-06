@@ -124,3 +124,13 @@ void print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 >What would happen if we made `s` a plain reference? What if we made `occurs` a reference to const?
 
 `s` 可以为普通引用，但用常量引用更安全，如果 `occurs` 为常量引用无法传递次数。
+
+## Exercise 6.16
+
+不能把const对象、字面值常量或者需要类型转换的对象传递给普通的引用形参，无法在形参定义为常量引用的函数中正常使用。
+
+```cpp
+bool is_empty(const string& s) { return s.empty(); }
+```
+
+## [Exercise 6.16](ex6_16.cpp)
