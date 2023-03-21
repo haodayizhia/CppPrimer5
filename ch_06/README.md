@@ -207,6 +207,37 @@ using namespace std;
 
 ## [Exercise 6.33](ex6_33.cpp)
 
-## [Exercise 6.44]
+## Exercise 6.34
 
 如果 `val` 为负，不断递归至程序占空间耗尽。
+
+## Exercise 6.35
+
+传的是值不是引用。
+
+## Exercise 6.36
+
+```cpp
+string (&arrStr())[10];
+```
+
+## Exercise 6.37
+
+```cpp
+// typedef string arrT[10];
+using arrT = string[10];
+arrT& arrStr();
+
+auto arrStr() -> string (&)[10];
+
+string arrS[10];
+decltype(arrS)& arrStr();
+```
+
+都可以。
+
+## Exercise 6.38
+
+```cpp
+decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
+```
