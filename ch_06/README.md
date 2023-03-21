@@ -206,3 +206,7 @@ using namespace std;
 合法，将数组 `ia` 赋值0-9。
 
 ## [Exercise 6.33](ex6_33.cpp)
+
+## [Exercise 6.44]
+
+如果 `val` 为负，不断递归至程序占空间耗尽。
