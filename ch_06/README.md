@@ -175,3 +175,11 @@ vector<int>::iterator change_val(int, vector<int>::iterator);
 ## [Exercise 6.25 && Exercise 6.26](ex6_25_26.cpp)
 
 ## [Exercise 6.27](ex6_27.cpp)
+
+## Exercise 6.28
+
+The type of `elem` in the `for` loop is `const const std::string&`.
+
+## Exercise 6.29
+
+取决于 `initializer_list` 元素的类型，如果复制的开销不大可以不必引用。
