@@ -171,3 +171,5 @@ vector<int>::iterator change_val(int, vector<int>::iterator);
 ## Exercise 6.24
 
 数组会转换成指针，当传递的数组维度不是10时仍能传递，但函数运行可能报错。
+
+## [Exercise 6.25 && Exercise 6.26](ex6_25_26.cpp)
