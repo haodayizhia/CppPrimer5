@@ -183,3 +183,26 @@ The type of `elem` in the `for` loop is `const const std::string&`.
 ## Exercise 6.29
 
 取决于 `initializer_list` 元素的类型，如果复制的开销不大可以不必引用。
+
+
+## Exercise 6.30
+
+<source>:3:17: warning: using directive refers to implicitly-defined namespace 'std'
+using namespace std;
+                ^
+<source>:11:33: error: non-void function 'str_subrange' should return a value [-Wreturn-type]
+        if (str1[i] != str2[i]) return;
+                                ^
+1 warning and 1 error generated.
+
+发现了return没有返回值，但没有检测到for循环后没有return。
+
+## Exercise 6.31
+
+引用绑定局部变量。
+
+## Exercise 6.32
+
+合法，将数组 `ia` 赋值0-9。
+
+## [Exercise 6.33](ex6_33.cpp)
