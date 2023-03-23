@@ -241,3 +241,8 @@ decltype(arrS)& arrStr();
 ```cpp
 decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 ```
+## Exercise 6.39
+
+(a)非法重载，二义性调用。
+(b)非法。
+(c)合法重载。
