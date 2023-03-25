@@ -250,3 +250,11 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 ## Exercise 6.40
 
 (b) 一旦某个形参被赋予了默认值，它后面所有形参都必须有默认值。
+
+## Exercise 6.41
+
+(a)非法，缺少实参。
+(b)合法。
+(c)合法，但是第二个实参会隐式地类型转换。
+
+## [Exercise 6.42](ex6_42.cpp)
