@@ -246,3 +246,7 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 (a)非法重载，二义性调用。
 (b)非法。
 (c)合法重载。
+
+## Exercise 6.40
+
+(b) 一旦某个形参被赋予了默认值，它后面所有形参都必须有默认值。
