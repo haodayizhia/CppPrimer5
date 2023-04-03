@@ -258,3 +258,21 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 (c)合法，但是第二个实参会隐式地类型转换。
 
 ## [Exercise 6.42](ex6_42.cpp)
+
+## Exercise 6.43
+
+内联函数定义和函数声明都放在头文件中。
+
+## [Exercise 6.44](ex6_44.cpp)
+
+## Exercise 6.45
+
+简单的函数可以声明为内联，复杂的（函数体长、递归函数等）不建议。
+
+## Exercise 6.46
+
+> Would it be possible to define `isShorter` as a `constexpr`? If so, do so. If not, explain why not.
+
+原则上不能，constexpr函数的形参和返回值都应该是字面值常量。
+
+参见more discusses: [#22](https://github.com/ReadingLab/Discussion-for-Cpp/issues/22)
