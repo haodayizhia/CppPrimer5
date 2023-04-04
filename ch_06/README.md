@@ -276,3 +276,6 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 原则上不能，constexpr函数的形参和返回值都应该是字面值常量。
 
 参见more discusses: [#22](https://github.com/ReadingLab/Discussion-for-Cpp/issues/22)
+
+
+## [Exercise 6.47](ex6_47.cpp)
