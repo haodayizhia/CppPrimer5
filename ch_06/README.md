@@ -279,3 +279,7 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 
 
 ## [Exercise 6.47](ex6_47.cpp)
+
+## Exercise 6.48
+
+不合理， `assert` 常用于检查“不能发生”的条件，而正常输入 `EOF` 时会发生。
