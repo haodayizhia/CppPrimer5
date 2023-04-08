@@ -303,3 +303,23 @@ decltype(odd)& arrPtr(int i) { return (i % 2) ? odd : even; }
 (d) 匹配 `void f(double, double = 3.14)`。
 
 ## [Exercise 6.51](ex6_51.cpp)
+
+## Exercise 6.52
+
+(a) 类型提升，3级。
+
+(b) 类型转换，4级。
+
+## Exercise 6.53
+
+(a)
+
+const版本重载。
+
+(b)
+
+const版本重载。
+
+(c)
+
+非法，一个拥有顶层const的形参无法和另一个没有顶层const的形参区分开来。
