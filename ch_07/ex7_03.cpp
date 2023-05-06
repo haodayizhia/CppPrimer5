@@ -1,12 +1,10 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 struct Sales_data {
     string isbn() const { return bookNo; }
     Sales_data &combine(const Sales_data &);
-    double avg_price() const;
     string bookNo;
     unsigned units_sold = 0;
     double revenue = 0.0;
@@ -16,43 +14,31 @@ Sales_data &Sales_data::combine(const Sales_data &rhs) {
     revenue += rhs.revenue;
     return *this;
 }
-double Sales_data::avg_price() const {
-    if (units_sold)
-        return revenue / units_sold;
-    else
-        return 0;
-}
-istream &read(istream &is, Sales_data &item) {
-    double price = 0;
-    is >> item.bookNo >> item.units_sold >> price;
-    item.revenue = item.units_sold * price;
-    return is;
-}
-ostream &print(ostream &os, const Sales_data &item) {
-    os << item.isbn() << ' ' << item.units_sold << ' ' << item.revenue << ' '
-       << item.avg_price();
-    return os;
-}
-Sales_data add(const Sales_data &lhs, Const Sales_data &rhs)
-{
-    Sales_data sum = lhs;
-    sum.combine(rhs);
-    return sum;
-}
 
 int main(int argc, char *argv[]) {
     Sales_data total;
-    if (read(cin, total)) {
+    double price = 0;
+    if (cin >> total.bookNo >> total.units_sold >> price) {
+        total.revenue = price * total.units_sold;
         Sales_data trans;
-        while (read(cin, trans)) {
+        while (cin >> trans.bookNo >> trans.units_sold >> price) {
+            trans.revenue = price * trans.units_sold;
             if (total.isbn() == trans.isbn())
                 total.combine(trans);
             else {
-                print(cout, total) << endl;
+                cout << total.isbn() << ' ' << total.units_sold << ' '
+                     << total.revenue << ' '
+                     << (total.units_sold == 0
+                             ? 0
+                             : total.revenue / total.units_sold)
+                     << endl;
                 total = trans;
             }
         }
-        print(cout, total) << endl;
+        cout << total.isbn() << ' ' << total.units_sold << ' ' << total.revenue
+             << ' '
+             << (total.units_sold == 0 ? 0 : total.revenue / total.units_sold)
+             << endl;
     } else {
         cerr << "No data?!" << endl;
     }
