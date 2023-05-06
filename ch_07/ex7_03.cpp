@@ -33,6 +33,12 @@ ostream &print(ostream &os, const Sales_data &item) {
        << item.avg_price();
     return os;
 }
+Sales_data add(const Sales_data &lhs, Const Sales_data &rhs)
+{
+    Sales_data sum = lhs;
+    sum.combine(rhs);
+    return sum;
+}
 
 int main(int argc, char *argv[]) {
     Sales_data total;
