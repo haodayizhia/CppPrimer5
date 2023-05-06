@@ -7,3 +7,5 @@
 ## [Exercise 7.3](ex7_03.cpp)
 
 ## [Exercise 7.4](ex7_04.h)
+
+## [Exercise 7.5](ex7_05.h)
