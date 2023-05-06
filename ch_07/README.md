@@ -10,6 +10,8 @@
 
 ## [Exercise 7.5](ex7_05.h)
 
+应该是 `const` ，返回操作不改变对象。
+
 ## [Exercise 7.6](ex7_06_sales_data.h)
 
 ## [Exercise 7.7](ex7_07.cpp)
