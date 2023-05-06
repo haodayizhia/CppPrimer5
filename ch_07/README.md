@@ -5,3 +5,5 @@
 ## [Exercise 7.2](ex7_02_sales_data.h)
 
 ## [Exercise 7.3](ex7_03.cpp)
+
+## [Exercise 7.4](ex7_04.h)
