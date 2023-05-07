@@ -28,15 +28,7 @@
 if(read(read(cin, data1), data2))
 ```
 
-we can try to divide it like that:
-
-```cpp
-std::istream &firstStep = read(cin, data1);
-std::istream &secondStep = read(firstStep, data2);
-if (secondStep)
-```
-
-the condition of the `if` statement would read two `Sales_data` object at one time.
+判断是否成功读取两个 `Sales_data` 。
 
 ## Exercise 7.11
 
