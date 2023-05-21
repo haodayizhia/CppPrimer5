@@ -40,6 +40,8 @@ if(read(read(cin, data1), data2))
 
 ## [Exercise 7.13](ex7_13.cpp)
 
+注意判断条件的 `cin` 。
+
 ## Exercise 7.14
 
 ```cpp
