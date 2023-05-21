@@ -36,6 +36,8 @@ if(read(read(cin, data1), data2))
 
 ## [Exercise 7.12](ex7_12_sales_data.h)
 
+需要提前声明。
+
 ## [Exercise 7.13](ex7_13.cpp)
 
 ## Exercise 7.14
