@@ -52,11 +52,11 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## Exercise 7.16
 
-There are no restrictions on how often an access specifier may appear.The specified access level remains in effect until the next access specifier or the end of the class body.
+没有限制，每个访问说明符的有效范围直到出现下一个访问说明符或者到达类的结尾为止。
 
-The members which are accessible to all parts of the program should define after a public specifier.
+`public` 成员定义类的接口，后面跟着构造函数和部分成员函数。
 
-The members which are accessible to the member functions of the class but are not accessible to code that uses the class should define after a private specifier.
+`private` 封装了类的实现细节，数据成员和作为实现部分的函数跟在 `private` 后面。
 
 ## Exercise 7.17
 
