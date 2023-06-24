@@ -111,7 +111,7 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## Exercise 7.28
 
-The second call to `display` couldn't print `#` among the output, cause the call to `set` would change the **temporary copy**, not myScreen.
+前者临时拷贝有 #，后者没有 #。
 
 ## Exercise 7.29
 
@@ -128,20 +128,18 @@ XXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Exercise 7.30
 
-### Pros
+**优点**
 
-- more explicit
-- less scope for misreading
-- can use the member function parameter which name is same as the member name.
+- 可以使用和成员名相同的函数参数名。
 
 ```cpp
 void setAddr(const std::string &addr) {this->addr = addr;}
 ```
 
-### Cons
+**缺点**
 
-- more to read
-- sometimes redundant
+- 阅读更长
+- 冗余
 
 ```cpp
 std::string getAddr() const { return this->addr; } // unnecessary
