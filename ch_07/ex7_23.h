@@ -7,6 +7,7 @@ class screen {
     screen() = default;
     screen(pos ht, pos wd, char c)
         : height(ht), width(wd), contents(ht * wd, c) {}
+    screen(pos ht, pos wd) : height(ht), width(wd), contents(ht * wd, ' ') {}
     char get() const { return contents[cursor]; }
     inline char get(pos ht, pos wd) const;
     screen &move(pos r, pos c);
