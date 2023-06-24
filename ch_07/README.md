@@ -107,7 +107,7 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## [Exercise 7.26](ex7_06_sales_data.h)
 
-## Exercise 7.27 [Class](ex7_27.h)|[Test](ex7_27_TEST.cpp)
+## [Exercise 7.27](ex7_23.h)
 
 ## Exercise 7.28
 
