@@ -97,23 +97,15 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## [Exercise 7.22](ex7_22.h)
 
-## Exercise 7.23 [Header](ex7_23.h)|[CPP](ex7_23.cpp)
+## [Exercise 7.23](ex7_23.h)
 
-## [Exercise 7.24](ex7_24.h)
+## [Exercise 7.24](ex7_23.h)
 
 ## Exercise 7.25
 
-The class below can rely on it. It goes in *Section 7.1.5*:
+可以，动态内存使用的 `vector` 和 `string`，类合成的版本可以正常工作。
 
-> ..the synthesized versions are unlikely to work correctly for classes that allocate resources that reside outside the class objects themselves.
->
-> Moreover, the synthesized versions for copy, assignment, and destruction work correctly for classes that have **vector or string members**.
-
-Hence the class below which used only built-in type and strings can rely on the default version of copy and assignment. (by [@Mooophy](https://github.com/Mooophy)\)
-
-## Exercise 7.26
-
-[Sales_data Definition](ex7_26_sales_data.h) | [Sales_data Implementation](ex7_26_sales_data.cpp)
+## [Exercise 7.26](ex7_06_sales_data.h)
 
 ## Exercise 7.27 [Class](ex7_27.h)|[Test](ex7_27_TEST.cpp)
 
