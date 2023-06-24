@@ -70,8 +70,8 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 用处：
 
-- 避免用户不小心破坏封装对象的状态。
-- 类的实现可以更改而无须更改用户级别的代码。
+- 确保用户代码不会无意间破坏封装对象的状态。
+- 被封装的类的具体实现细节可以随时改变，而而无须调整用户级别的代码。
 
 ## Exercise 7.19
 
@@ -82,18 +82,16 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## Exercise 7.20
 
-`friend` is a mechanism by which a class grants access to its nonpublic members. They have the same rights as members.
+允许其他类或函数访问类的非公有成员时。
 
-**Pros**:
+**利**:
 
-- the useful functions can refer to class members in the class scope without needing to explicitly prefix them with the class name.
-- you can access all the nonpublic members conveniently.
-- sometimes, more readable to the users of class.
+- 可以访问类作用域中的名称而无需加类名前缀。
+- 可以方便地访问所有的非公有成员。
 
-**Cons**:
+**弊**:
 
-- lessens encapsulation and therefore maintainability.
-- code verbosity, declarations inside the class, outside the class.
+- 降低了封装性。
 
 ## [Exercise 7.21](ex7_21_sales_data.h)
 
