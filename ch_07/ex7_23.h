@@ -27,3 +27,7 @@ char screen::get(pos r, pos c) const {
     pos row = r * width;
     return contents[row + c];
 }
+void screen::some_member() const {
+    ++access_ctr;
+    std::cout << access_ctr << std::endl;
+}
