@@ -1,34 +1,56 @@
 #include <iostream>
 #include <string>
 
-class screen {
+class Screen {
    public:
     typedef std::string::size_type pos;
-    screen() = default;
-    screen(pos ht, pos wd, char c)
+    Screen() = default;
+    Screen(pos ht, pos wd, char c)
         : height(ht), width(wd), contents(ht * wd, c) {}
-    screen(pos ht, pos wd) : height(ht), width(wd), contents(ht * wd, ' ') {}
+    // ex7_24
+    Screen(pos ht, pos wd) : height(ht), width(wd), contents(ht * wd, ' ') {}
     char get() const { return contents[cursor]; }
     inline char get(pos ht, pos wd) const;
-    screen &move(pos r, pos c);
+    Screen &move(pos r, pos c);
     void some_member() const;
+    // ex7_27
+    Screen &set(char);
+    Screen &set(pos, pos, char);
+    Screen &display(std::ostream &os) {
+        do_display(os);
+        return *this;
+    }
+    const Screen &display(std::ostream &os) const {
+        do_display(os);
+        return *this;
+    }
 
    private:
     pos cursor = 0;
     pos height = 0, width = 0;
     std::string contents;
     mutable size_t access_ctr = 0;
+    // ex7_27
+    void do_display(std::ostream &os) const { os << contents; }
 };
-inline screen &screen::move(pos r, pos c) {
+inline Screen &Screen::move(pos r, pos c) {
     pos row = r * width;
     cursor = row + c;
     return *this;
 }
-char screen::get(pos r, pos c) const {
+char Screen::get(pos r, pos c) const {
     pos row = r * width;
     return contents[row + c];
 }
-void screen::some_member() const {
+void Screen::some_member() const {
     ++access_ctr;
     std::cout << access_ctr << std::endl;
+}
+inline Screen &Screen::set(char c) {
+    contents[cursor] = c;
+    return *this;
+}
+inline Screen &Screen::set(pos r, pos col, char ch) {
+    contents[r * width + col] = ch;
+    return *this;
 }
