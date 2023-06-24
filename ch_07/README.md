@@ -60,25 +60,25 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## Exercise 7.17
 
-The only difference between using `class` and using `struct` to define a class is the default access level. (`class` : private, `struct` : public)
+唯一的区别是默认访问权限， `struct` 第一个访问说明符之前的成员是 `public` 的， `class` 第一个访问说明符之前的成员是 `private` 的。
 
 ## Exercise 7.18
 
-encapsulation is the separation of implementation from interface. It hides the implementation details of a type. (In C++, encapsulation is enforced by putting the implementation in the private part of a class)
+封装是实现和接口的分离，隐藏了类型实现的细节。（C++中，将实现放在类的 `class` 中来封装）
 
 ---
 
-Important advantages:
+用处：
 
-- User code cannot inadvertently corrupt the state of an encapsulation object.
-- The implementation of an encapsulated class can change over time without requiring changes in user-level code.
+- 避免用户不小心破坏封装对象的状态。
+- 类的实现可以更改而无须更改用户级别的代码。
 
 ## Exercise 7.19
 
-- `public` include: constructors, `getName()`, `getAddress()`.
-- `private` include: `name`, `address`.
+- `public`: 构造函数。
+- `private`: 数据成员。
 
-the interface should be defined as public, the data shouldn't expose to outside of the class.
+提供接口，保护数据成员。
 
 ## Exercise 7.20
 
