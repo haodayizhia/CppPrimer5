@@ -93,7 +93,7 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 - 降低了封装性。
 
-## [Exercise 7.21](ex7_04.h)
+## [Exercise 7.21](ex7_21_sales_data.h)
 
 ## [Exercise 7.22](ex7_22.h)
 
