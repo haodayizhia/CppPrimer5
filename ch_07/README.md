@@ -216,7 +216,7 @@ and `Exercise::initVal()` should be defined.
 
 ## Exercise 7.36
 
-> In this case, the constructor initializer makes it appear as if `base` is initialized with `i` and then `base` is used to initialize `rem`. However, `base` is initialized first. The effect of this initializer is to initialize `rem` with the undefined value of `base`!
+> 初始化的顺序和定义顺序相同，用定义的 `base` 初始化 `rem`。
 
 ### fixd
 
@@ -246,24 +246,31 @@ Sales_data(std::istream &is = std::cin) { read(is, *this); }
 
 ## Exercise 7.39
 
-illegal. cause the call of overloaded 'Sales_data()' is **ambiguous**.
+不合法，调用 `Sales_data()` 时有歧义。
 
 ## Exercise 7.40
 
 Such as `Book`:
 
 ```cpp
-class Book {
-public:
-    Book() = default;
-    Book(unsigned no, std::string name, std::string author, std::string pubdate) : no_(no), name_(name), author_(author), pubdate_(pubdate) { }
-    Book(std::istream &in) { in >> no_ >> name_ >> author_ >> pubdate_; }
+class Employee {
+   public:
+    Employee() = default;
+    Employee(std::string _id, std::string _name, std::string _department,
+             std::string _position, int _enter_date, double _AnnualSalary)
+        : name(_name),
+          department(_department),
+          position(_position),
+          enter_date(_enter_date),
+          AnnualSalary(_AnnualSalary) {}
 
-private:
-    unsigned no_;
-    std::string name_;
-    std::string author_;
-    std::string pubdate_;
+   private:
+    std::string id;
+    std::string name;
+    std::string department;
+    std::string position;
+    int enter_date;
+    double AnnualSalary;
 };
 ```
 
