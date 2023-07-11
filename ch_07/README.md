@@ -281,17 +281,23 @@ class Employee {
 ## Exercise 7.42
 
 ```cpp
-class Book {
-public:
-  Book(unsigned no, std::string name, std::string author, std::string pubdate):no_(no), name_(name), author_(author), pubdate_(pubdate) { }
-  Book() : Book(0, "", "", "") { }
-  Book(std::istream &in) : Book() { in >> no_ >> name_ >> author_ >> pubdate_; }
+class Employee {
+   public:
+    Employee() = default;
+    Employee(std::string _id, std::string _name, std::string _department,
+             std::string _position, int _enter_date, double _AnnualSalary)
+        : Employee() {
+        id = _id, name = _name, department = _department, position = _position,
+        enter_date = _enter_date, AnnualSalary = _AnnualSalary;
+    }
 
-private:
-  unsigned no_;
-  std::string name_;
-  std::string author_;
-  std::string pubdate_;
+   private:
+    std::string id;
+    std::string name;
+    std::string department;
+    std::string position;
+    int enter_date;
+    double AnnualSalary;
 };
 ```
 
