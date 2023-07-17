@@ -1,6 +1,12 @@
 class NoDefault {
    public:
-    NoDefault(int);
+    NoDefault(int){};
 };
 
-class C { NoDefault data; };
+class C {
+   public:
+    C() : data(0) {}
+
+   private:
+    NoDefault data;
+};
