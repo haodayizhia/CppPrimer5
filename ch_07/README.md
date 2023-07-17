@@ -313,10 +313,10 @@ class Employee {
 
 ## Exercise 7.46
 
-- a) A class must provide at least one constructor. (**untrue**, "The compiler-generated constructor is known as the synthesized default constructor.")
-- b) A default constructor is a constructor with an empty parameter list. (**untrue**, A default constructor is a constructor that is used if no initializer is supplied.What's more, A constructor that supplies default arguments for all its parameters also defines the default constructor)
-- c) If there are no meaningful default values for a class, the class should not provide a default constructor. (**untrue**, the class should provide.)
-- d) If a class does not define a default constructor, the compiler generates one that initializes each data member to the default value of its associated type. (**untrue**, only if our class does not explicitly define **any constructors**, the compiler will implicitly define the default constructor for us.)
+- a) A class must provide at least one constructor. (**不正确**, "编译器生成的构造函数为合成的默认构造函数")
+- b) A default constructor is a constructor with an empty parameter list. (**不正确**, 参数列表包含默认实参的情况下不为空)
+- c) If there are no meaningful default values for a class, the class should not provide a default constructor. (**我认为正确**, 默认值无意义时删除或不提供构造函数)
+- d) If a class does not define a default constructor, the compiler generates one that initializes each data member to the default value of its associated type. (**不正确**, 只有当没有定义任何构造函数时，编译器才会隐式地合成默认的构造函数)
 
 ## Exercise 7.47
 
