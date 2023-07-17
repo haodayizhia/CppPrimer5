@@ -305,11 +305,11 @@ class Employee {
 
 ## Exercise 7.44
 
-illegal, cause there are ten elements, each would be value initialized. But no default constructor for `NoDefault` type.
+不合法，只提供数量而略去初始值时，容器中的元素被值初始化，其中当元素是类类型时由类默认初始化， `NoDefault` 没有默认构造函数。
 
 ## Exercise 7.45
 
-No problem. cause `C` have the default constructor.
+合法， `C` 有构造函数。
 
 ## Exercise 7.46
 
