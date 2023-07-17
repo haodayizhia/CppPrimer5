@@ -301,7 +301,7 @@ class Employee {
 };
 ```
 
-## [## Exercise 7.43](ex7_43.cpp)
+## [Exercise 7.43](ex7_43.cpp)
 
 ## Exercise 7.44
 
