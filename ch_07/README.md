@@ -320,61 +320,36 @@ class Employee {
 
 ## Exercise 7.47
 
-Whether the conversion of a `string` to `Sales_data` is desired **depends on how we think our users will use the conversion**. In this case, it might be okay. The `string` in null_book probably represents a nonexistent ISBN.
+取决于是否需要利用该构造函数的隐式转换。
 
 Benefits:
 
-- prevent the use of a constructor in a context that requires an implicit conversion
-- we can define a constructor which is used only with the direct form of initialization
+- 避免未预料到的隐式转换
+- 使该构造函数只能以直接初始化的方式使用
 
 Drawbacks:
 
-- meaningful only on constructors that can be called with a single argument
+- 不够方便
 
 ## Exercise 7.48
 
-Both are noting happened.
+`item1` 和 `item2` 都是接收一个 `string` 参数构造出来的 `Sales_data` 类。
 
 ## Exercise 7.49
 
 ```cpp
 (a) Sales_data &combine(Sales_data); // ok
-(b) Sales_data &combine(Sales_data&); // [Error] no matching function for call to 'Sales_data::combine(std::string&)' (`std::string&` can not convert to `Sales_data` type.)
-(c) Sales_data &combine(const Sales_data&) const; // The trailing const mark can't be put here, as it forbids any mutation on data members. This conflicts with combines semantics.
+(b) Sales_data &combine(Sales_data&); // 错误，类型不匹配且无法转换
+(c) Sales_data &combine(const Sales_data&) const; // 错误，const函数不能改变类对象
 ```
 
 Some detailed explanation about problem (b) :
-
-It's wrong.
-
-Because `combine`’s parameter is a non-const reference , we can't pass a temporary to that parameter. If `combine`’s parameter is a reference to `const` , we can pass a temporary to that parameter. Like this :`Sales_data &combine(const Sales_data&);` Here we call the `Sales_data` `combine` member function with a string argument. This call is perfectly legal; the compiler automatically creates a `Sales_data` object from the given string. That newly generated (temporary) `Sales_data` is passed to `combine`.(check on page 295(English Edition))
 
 ## [Exercise 7.50](ex7_50.h)
 
 ## Exercise 7.51
 
-Such as a function like that:
-
-```cpp
-int getSize(const std::vector<int>&);
-```
-
-if vector has not defined its single-argument constructor as explicit. we can use the function like:
-
-```cpp
-getSize(34);
-```
-
-What is this mean? It's very confused.
-
-But the `std::string` is different. In ordinary, we use `std::string` to replace `const char *`(the C language). so when we call a function like that:
-
-```cpp
-void setYourName(std::string); // declaration.
-setYourName("pezy"); // just fine.
-```
-
-it is very natural.
+`string` 这样用可以提供便利， `vector`这样用引发歧义。
 
 ## Exercise 7.52
 
