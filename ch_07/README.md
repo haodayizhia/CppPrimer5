@@ -48,7 +48,7 @@ if(read(read(cin, data1), data2))
 Sales_data() : units_sold(0) , revenue(0){}
 ```
 
-## [Exercise 7.15](ex7_15.h)
+## [Exercise 7.15](ex7_04.h)
 
 ## Exercise 7.16
 
@@ -95,7 +95,7 @@ Sales_data() : units_sold(0) , revenue(0){}
 
 ## [Exercise 7.21](ex7_21_sales_data.h)
 
-## [Exercise 7.22](ex7_22.h)
+## [Exercise 7.22](ex7_04.h)
 
 ## [Exercise 7.23](ex7_23.h)
 
