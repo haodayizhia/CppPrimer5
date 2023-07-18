@@ -345,7 +345,9 @@ Drawbacks:
 
 Some detailed explanation about problem (b) :
 
-## [Exercise 7.50](ex7_50.h)
+## [Exercise 7.50](ex7_04.h)
+
+目前没有。
 
 ## Exercise 7.51
 
