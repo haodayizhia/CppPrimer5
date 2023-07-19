@@ -371,30 +371,17 @@ struct Sales_data {
 
 ## Exercise 7.54
 
-shouldn't, cause a `constexpr` function must contain exactly one **return** statement.
+不能， `constexpr` 函数能拥有的唯一可执行语句就是返回语句，具备隐式 `const` 属性。
 
 ## Exercise 7.55
 
-no.
-
-`std::string` is not a literal type, and it can be verified by following codes:
+不是，数据成员都是字面值类型的聚合类才是字面值常量类。如：
 
 ```cpp
-#include <string>
-#include <iostream>
-#include <type_traits>
-
 struct Data {
     int ival;
-    std::string s;
+    char c;
 };
-
-int main()
-{
-    std::cout << std::boolalpha;
-    std::cout << std::is_literal_type<Data>::value << std::endl;
-    // output: false
-}
 ```
 
 ## Exercise 7.56
