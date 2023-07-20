@@ -388,16 +388,14 @@ struct Data {
 
 > What is a static class member?
 
-A class member that is **associated with the class**, rather than with individual objects of the class type.
+类的静态成员属于类，但与类的对象无关。
 
-> What are the advantages of static members?
+优点：共享信息，并且静态成员值改变，所有对象都能使用新值。
 
-each object can no need to store a common data. And if the data is changed, each object can use the new value.
+> 区别
 
-> How do they differ from ordinary members?
-
-- a static data member can have **incomplete type**.
-- we can use a static member **as a default argument**.
+- 静态成员可以是不完全类型
+- 静态成员可作为默认实参
 
 ## [Exercise 7.57](ex7_57.h)
 
@@ -410,8 +408,8 @@ static double rate = 6.5;
 
 static vector<double> vec(vecSize);
                             ^
-            we may not specify an in-class initializer inside parentheses.
-```
+            只能在类内初始化字面值常量类型的静态成员.
+```+
 
 Fixed:
 
@@ -420,7 +418,7 @@ Fixed:
 class Example {
 public:
     static constexpr double rate = 6.5;
-    static const int vecSize = 20;
+    static constexpr int vecSize = 20;
     static vector<double> vec;
 };
 
