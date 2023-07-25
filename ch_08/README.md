@@ -23,7 +23,7 @@ std::istream &example(std::istream &in) {
 while (cin >> i) /*  ...    */
 ```
 
-putting `cin` in an error state cause to terminate. such as `eofbit`, `failbit` and `badbit`.
+当 `cin` 进入错误状态或输入文件结束标识时。
 
 ## [Exercise 8.4](ex8_04.cpp)
 
