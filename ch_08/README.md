@@ -53,5 +53,5 @@ while (cin >> i) /*  ...    */
 
 >Why did we declare entry and nums as const auto &?
 
-- cause they are all class type, not the built-in type. so **reference** more effective.
-- output shouldn't change their values. so we added the `const`.
+- 更高效，无需拷贝，减少内存开销。
+- 不会改变参数的值。
