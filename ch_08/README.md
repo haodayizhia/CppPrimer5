@@ -45,7 +45,7 @@ while (cin >> i) /*  ...    */
 
 >Why didn’t we use in-class initializers in PersonInfo?
 
-Cause we need a aggregate class here. so it should have no in-class initializers.
+因为此处需要一个聚合类，每个类对象的数据成员需要有意义。
 
 ## [Exercise 8.13](ex8_13.cpp)
 
