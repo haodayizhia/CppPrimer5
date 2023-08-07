@@ -73,7 +73,7 @@ while(iter1 != iter2)
 
 ### note
 
-operator `<` can be used in `list`,but can't be applied to iterator for `list`.
+`list` 支持 `<` 关系运算符，但迭代器不支持。
 
 ## Exercise 9.7
 
