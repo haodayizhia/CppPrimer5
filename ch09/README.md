@@ -26,8 +26,8 @@ std::list<std::deque<int>> ldi;
 
 two iterators, `begin` and `end`:
 
-* they refer to elements of the same container.
-* It is possible to reach `end` by repeatedly incrementing `begin`.
+* 两个迭代器指向同一个容器中的元素或者是尾元素之后的位置。
+* 可以通过反复递增 `begin` 来到达 `end`。
 
 ## Exercise 9.4
 
