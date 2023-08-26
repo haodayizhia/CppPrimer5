@@ -92,9 +92,9 @@ while(iter1 != iter2)
 
 >What is the difference between the `begin` and `cbegin` functions?
 
-`cbegin` is a const member that returns the container’s **const_iterator** type.
+`cbegin` 是 const 成员，返回容器的 **const_iterator**。
 
-`begin` is nonconst and returns the container’s **iterator** type.
+`begin` 是重载函数，一个是 const 成员，另一个是非 const 成员。
 
 ## Exercise 9.10
 
@@ -126,9 +126,9 @@ auto it2 = v2.begin(), it3 = v1.cbegin(), it4 = v2.cbegin();
 
 -----
 
-`it1` is `vector<int>::iterator`
+`it1` 为 `vector<int>::iterator`
 
-`it2`,`it3` and `it4` are `vector<int>::const_iterator`
+`it2`,`it3` 和 `it4` 为 `vector<int>::const_iterator`
 
 ## Exercise 9.11
 
