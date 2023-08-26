@@ -147,7 +147,7 @@ vector<int> vec(other_vec.begin(), other_vec.end()); // same as other_vec
 
 >Explain the differences between the constructor that takes a container to copy and the constructor that takes two iterators.
 
-* The constructor that takes another container as an argument (excepting array) assumes the container type and element type of both containers are identical. It will also copy all the elements of the received container into the new one:
+* 接受一个容器创建其拷贝的构造函数要求容器类型及元素类型匹配，并会拷贝容器内所有元素：
 
 ```cpp
 list<int> numbers = {1, 2, 3, 4, 5};
@@ -156,8 +156,7 @@ vector<int> numbers3(numbers);      // error: no matching function for call...
 list<double> numbers4(numbers);     // error: no matching function for call...
 ```
 
-* The constructor that takes two iterators as arguments does not require the container types to be identical. Moreover, the element types in the new and original containers can differ as long as it is possible to convert the elements we’re copying to the element type of the container we are initializing. It will also copy only the object delimited by the received iterators.
-
+* 接受两个迭代器创建其拷贝的构造函数不要求容器类型及元素类型相同，只要能将要拷贝的元素转换为要初始化的容器的元素，并只拷贝迭代器范围内的元素：
 ```cpp
 list<int> numbers = {1, 2, 3, 4, 5};
 list<int> numbers2(numbers.begin(), numbers.end);        // ok, numbers2 has the same elements as numbers
