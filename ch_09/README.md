@@ -173,6 +173,8 @@ forward_list<float> numbers5(numbers.begin(), numbers.end());   // ok, number5 i
 
 ## [Exercise 9.16](ex9_16.cpp)
 
+报错:error: no match for 'operator<' (operand types are 'std::__cxx11::list<int>' and 'std::vector<int>')
+
 ## Exercise 9.17
 
 >Assuming c1 and c2 are containers, what (if any) constraints does the following usage place on the types of c1 and c2?
