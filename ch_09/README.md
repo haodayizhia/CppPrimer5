@@ -147,7 +147,7 @@ vector<int> vec(other_vec.begin(), other_vec.end()); // same as other_vec
 
 >Explain the differences between the constructor that takes a container to copy and the constructor that takes two iterators.
 
-* 接受一个容器创建其拷贝的构造函数要求容器类型及元素类型匹配，并会拷贝容器内所有元素：
+* 接受一个容器创建其拷贝的构造函数要求容器类型及元素类型匹配，并会拷贝容器内所有元素:
 
 ```cpp
 list<int> numbers = {1, 2, 3, 4, 5};
