@@ -184,6 +184,10 @@ Second,the type held must support relational operation. (@Mooophy)
 
 Both c1 and c2 are the containers except the unordered associative containers.(@pezy)
 
+* 都不是无序关联容器
+* 容器类型相同，且保存相同类型的元素
+* 元素支持 `<` 运算符
+
 ## [Exercise 9.18](ex9_18.cpp)
 
 ## [Exercise 9.19](ex9_19.cpp)
