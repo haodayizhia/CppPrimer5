@@ -179,10 +179,9 @@ forward_list<float> numbers5(numbers.begin(), numbers.end());   // ok, number5 i
 
 >Assuming c1 and c2 are containers, what (if any) constraints does the following usage place on the types of c1 and c2?
 
-First, there must be the identical container and same type holded.
-Second,the type held must support relational operation. (@Mooophy)
-
-Both c1 and c2 are the containers except the unordered associative containers.(@pezy)
+```cpp
+if (c1 < c2)
+```
 
 * 都不是无序关联容器
 * 容器类型相同，且保存相同类型的元素
