@@ -234,11 +234,11 @@ the values of val, val2, val3, and val4 be if c.size() is 1?
 >In the program on page 349 that erased a range of
 elements, what happens if elem1 and elem2 are equal? What if elem2 or both elem1 and elem2 are the off-the-end iterator?
 
-if elem1 and elem2 are equal, nothing happened.
+如果elem1和elem2相等，不做任何事。
 
-if elem2 is the off-the-end iterator, it would delete from elem1 to the end.
+如果elem2是尾后迭代器，将从elem1开始的所有元素删除。
 
-if both elem1 and elem2 are the off-the-end iterator, nothing happened too.
+如果elem1和elem2都是尾后迭代器，不做任何事。
 
 ## [Exercise 9.26](ex9_26.cpp)
 
