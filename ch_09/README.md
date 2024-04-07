@@ -271,9 +271,16 @@ that takes a single argument place on the element type?
 
 ## [Exercise 9.32](ex9_32.cpp)
 
-## [Exercise 9.33](ex9_33.cpp)
+## Exercise 9.33
 
-## [Exercise 9.34](ex9_34.cpp)
+未定义的错误，迭代器失效。
+
+## Exercise 9.34
+
+将vi中的奇数复制，程序会死循环。
+
+fix:
+iter+=2;
 
 ## Exercise 9.35
 
