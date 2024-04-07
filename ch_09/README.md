@@ -280,7 +280,9 @@ that takes a single argument place on the element type?
 将vi中的奇数复制，程序会死循环。
 
 fix:
+```cpp
 iter+=2;
+```
 
 ## Exercise 9.35
 
