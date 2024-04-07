@@ -256,8 +256,8 @@ elements, what happens if elem1 and elem2 are equal? What if elem2 or both elem1
 vec.resize(100) do? What if we next wrote vec.resize(10)?
 
 ```cpp
-vec.resize(100);    // adds 75 items to the back of vec. These added items are value initialized.
-vec.resize(10);     // erases 90 elements from the back of vec
+vec.resize(100);    // 在vec的末尾添加75个元素，新元素值初始化或默认初始化
+vec.resize(10);     // 从vec末尾删除90个元素
 ```
 
 ## Exercise 9.30
@@ -265,7 +265,7 @@ vec.resize(10);     // erases 90 elements from the back of vec
 >What, if any, restrictions does using the version of resize
 that takes a single argument place on the element type?
 
-If the container holds elements of a class type and resize adds elements, we must supply an **initializer** or the element type must have a **default constructor**.
+元素类型为内置类型(可以值初始化)或提供默认构造函数。
 
 ## Exercise 9.31 [use list](ex9_31_1.cpp) | [use forward_list](ex9_31_2.cpp)
 
