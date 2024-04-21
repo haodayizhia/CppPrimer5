@@ -271,6 +271,8 @@ that takes a single argument place on the element type?
 
 ## [Exercise 9.32](ex9_32.cpp)
 
+编译器计算表达式的顺序是未知的，不合法。
+
 ## Exercise 9.33
 
 未定义的错误，迭代器失效。
