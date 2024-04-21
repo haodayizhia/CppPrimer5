@@ -291,21 +291,21 @@ iter += 2;
 
 >Explain the difference between a vector’s capacity and its size.
 
-The **size** of a container is the number of **elements** it already holds;
+**size**指容器包含的元素个数。
 
-The **capacity** is how many elements it can hold before more **space** must be allocated.
+**capacity**指容器在不分配新的内存空间的前提下最多能包含的元素个数。
 
 ## Exercise 9.36
 
 >Can a container have a capacity less than its size?
 
-cannot.
+不可能。
 
 ## Exercise 9.37
 
 >Why don’t list or array have a capacity member?
 
-`list` elements does not store contiguously. `array` has the fixed size, thus cannot added elements to it.
+链表的存储空间不是连续的，数组的存储空间一开始就固定好了。
 
 ## [Exercise 9.38](ex9_38.cpp)
 
@@ -321,10 +321,7 @@ while (cin >> word)
     svec.push_back(word);
 svec.resize(svec.size()+svec.size()/2);
 ```
-
-The `while` loop will read words from `cin` and store them in out vector. Even if we initially reserved 1024 elements, if there are more words read from `cin`, our vector's capacity will be automatically increased (most implementations will double the previous capacity) to accommodate them.
-
-And now comes the catch. `resize()` is different from `reserve()`. In this case `resize()` will add another `svec.size()/2` value initialized elements to `svec`. If this exceeds `svec.capacity()` it will also automatically increase it to accommodate the new elements.
+给vector对象分配容纳1024个元素的内存空间并从标准输入填充，如果输入元素个数超过1024容器自动分配更大的内存空间，然后将容器的元素个数调整为`svec.size()+svec.size()/2`，新个数大于容器内存空间则重新分配内存，如果新个数大于原个数则新元素值初始化，如果小于原个数则截去多的元素。
 
 ## Exercise 9.40
 
