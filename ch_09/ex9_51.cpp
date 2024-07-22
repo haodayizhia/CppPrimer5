@@ -2,6 +2,8 @@
 #include <array>
 #include <iostream>
 #include <string>
+#include <vector>
+
 class date {
    public:
     explicit date(std::string);
@@ -16,18 +18,27 @@ class date {
                                           "Sep", "Oct", "Nov", "Dec"};
 };
 date::date(std::string s) {
-    std::string delimiters = " ,/";
-    auto delm1 = s.find_first_of(delimiters);
-    std::string month_str = s.substr(0, delm1);
+    std::vector<unsigned int> uvec;
+    size_t pos = 0;
+    while (pos != s.size()) {
+        if (isalnum(s[pos]) || isdigit(s[pos])) {
+            uvec.push_back(pos);
+            size_t j = pos + 1;
+            while (j != s.size() && (isalnum(s[j]) || isdigit(s[j]))) ++j;
+            pos = j;
+            uvec.push_back(pos);
+        } else
+            ++pos;
+    }
+    std::string month_str = s.substr(uvec[0], uvec[1] - uvec[0]);
     if (std::isdigit(month_str.at(0)))
         month = stoi(month_str);
     else {
         for (size_t i = 0; i != 12; ++i)
-            if (month_str.find(months[i])!=std::string::npos) month = i + 1;
+            if (month_str.find(months[i]) != std::string::npos) month = i + 1;
     }
-    auto delm2 = s.find_first_of(delimiters, delm1 + 1);
-    day = stoi(s.substr(delm1 + 1, delm2 - delm1));
-    year = stoi(s.substr(delm2 + 1));
+    day = stoi(s.substr(uvec[2], uvec[3] - uvec[2]));
+    year = stoi(s.substr(uvec[4], uvec[5] - uvec[4]));
 }
 inline void date::print() {
     std::cout << month << ' ' << day << ' ' << year << std::endl;
