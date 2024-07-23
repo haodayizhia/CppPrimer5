@@ -12,9 +12,11 @@ int main(int argc, char* argv[]) {
         } else
             stk.push(i);
     }
+    std::string s;
     while (!stk.empty()) {
-        std::cout << stk.top();
+        s.insert(s.begin(), stk.top());
         stk.pop();
     }
+    std::cout << s << std::endl;
     return 0;
 }
