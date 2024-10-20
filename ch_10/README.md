@@ -19,9 +19,7 @@
 
 > We said that algorithms do not change the size of the containers over which they operate. Why doesn’t the use of back_inserter invalidate this claim?
 
-Cause the `back_inserter` is a **insert iterator**, what iterator adaptor that generates an iterator that **uses a container operation** to add elements to a given container.
-
-the algorithms don't change the size, but the iterator can change it by using the container operation.
+因为算法是运行于迭代器之上的, 与容器类型无关. 而`back_inserter`是对容器的操作, 会调用容器的`push_back`将元素添加到容器中.
 
 ## [Exercise 10.9](ex10_09.cpp)
 
