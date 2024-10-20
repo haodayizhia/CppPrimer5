@@ -8,7 +8,12 @@
 
 ## [Exercise 10.6](ex10_06.cpp)
 
-## [Exercise 10.7](ex10_07.cpp)
+## Exercise 10.7
+
+- (a) 错误, 传递给`copy`的目的序列至少要包含与输入序列一样多的元素, 这里应该用`back_inserter`.
+
+* (b) 错误, `reserve`改变的容器的内存空间, 而不是元素个数, 应该用`resize`.
+
 
 ## Exercise 10.8
 
