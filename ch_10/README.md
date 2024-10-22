@@ -27,9 +27,7 @@
 
 > Why do you think the algorithms don’t change the size of containers?
 
-@Mooophy: The aim of this design is to separate the algorithms and the operation provided by member function.
-
-@pezy: Cause the library algorithms operate on **iterators**, **not containers**. Thus, an algorithm **cannot (directly)** add or remove elements.
+算法运行于迭代器之上, 是对容器的元素进行操作, 要改变容器的大小应当使用容器的操作.
 
 ## [Exercise 10.11](ex10_11.cpp)
 
