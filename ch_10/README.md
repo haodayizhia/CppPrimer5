@@ -129,10 +129,10 @@ Assuming the function to be bound have `n` parameters, bind take `n + 1` paramet
 > Based only on the algorithm and argument names, describe the operation that the each of the following library algorithms performs:
 
 ```cpp
-replace(beg, end, old_val, new_val); // replace the old_elements in the input range as new_elements.
-replace_if(beg, end, pred, new_val); // replace the elements in the input range which pred is true as new_elements.
-replace_copy(beg, end, dest, old_val, new_val); // copy the new_elements which is old_elements in the input range into dest.
-replace_copy_if(beg, end, dest, pred, new_val); // copy the new_elements which pred is true in the input range into dest.
+replace(beg, end, old_val, new_val); // 将输入范围中的值old_val替换为新值.
+replace_if(beg, end, pred, new_val); // 将输入范围中使得谓词返回为非0值的元素替换..
+replace_copy(beg, end, dest, old_val, new_val); // 将输入范围中的旧值替换为新值并输出到目标迭代器.
+replace_copy_if(beg, end, dest, pred, new_val); // 将输入范围中使得谓词返回为非0值的元素替换为新值并输出到目标迭代器.
 ```
 
 ## [Exercise 10.42](ex10_42.cpp)
