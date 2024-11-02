@@ -4,19 +4,19 @@
 
 >Describe the differences between a map and a vector.
 
-A `map` is a collection of key-value pairs. we can get a value **lookup by key** efficiently.
+`map` 保存的元素为值-对`pair`, 按关键字的顺序保存和访问元素, 而且访问值的下标是关键字, 支持高效的关键字查找和访问.
 
-A `vector` is a collection of objects, and every object has an **associated index**, which gives access to that object.
+`vector` 存储的元素下标为整数, 按下标顺序保存和访问元素.
 
 ## Exercise 11.2
 
 >Give an example of when each of list, vector, deque, map, and set might be most useful.
 
-- `list` : a to-do list. always need insert or delete the elements anywhere.
-- `vector` : save some important associated data, always need query elements by index.
-- `deque` : message handle. FIFO.
-- `map` : dictionary.
-- `set` : bad_checks.
+- `list` : 需要频繁插入或删除元素的序列, 如游戏任务表.
+- `vector` : 需要快速随机访问的序列, 如每天的天气.
+- `deque` : 提供快速访问并首位删除或添加的序列, 如排队列表.
+- `map` : 提供快速查找和访问, 如字典和电话本.
+- `set` : 提供快速查找, 如黑名单.
 
 ## [Exercise 11.3 and 11.4](ex11_3_4.cpp)
 
