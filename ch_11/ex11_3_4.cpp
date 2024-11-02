@@ -19,8 +19,9 @@ void ex11_4(std::map<std::string, size_t> &word_count,
     while (std::cin >> word) {
         std::for_each(word.begin(), word.end(),
                       [](char &c) { c = toupper(c); });
-        std::remove_if(word.begin(), word.end(),
-                       [](char &c) { return ispunct(c); });
+        word.erase(std::remove_if(word.begin(), word.end(),
+                                  [](char &c) { return ispunct(c); }),
+                   word.end());
         if (exclude.find(word) == exclude.end()) ++word_count[word];
     }
     for (const auto &w : word_count)
