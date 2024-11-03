@@ -24,16 +24,16 @@
 
 >Explain the difference between a map and a set. When might you use one or the other?
 
-- `set` : the element type is the **key type**.
-- `map` : we should use a key-value pair, such as `{key, value}` to indicate that the items together from one element in the map.
+- `set` : 元素类型是关键字.
+- `map` : 元素类型为关键字-值对.
 
-I use `set` when i just need to store the `key`, In other hand, I　would like use `map` when i need to store a key-value pair.
+当只需要保存关键字时用 `set` , 当需要关键字-值的映射关系时用 `map` .
 
 ## Exercise 11.6
 
 >Explain the difference between a set and a list. When might you use one or the other?
 
-`set` is unique and order, but `list` is neither. using which one depend on whether the elements are unique and order to store.
+`set` 不允许重复关键字且按关键字顺序排序, 支持高效的查找和访问. 而 `list` 允许重复且支持双向顺序访问, 频繁插入和删除元素时更高效.
 
 ## [Exercise 11.7](ex11_7.cpp)
 
