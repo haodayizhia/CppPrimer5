@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 
-#include "ExerciseConfig.h"
-
 int main(int argc, char *argv[]) {
     //! ex11.9
     std::map<std::string, std::list<size_t>> word_line;
