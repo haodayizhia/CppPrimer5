@@ -78,7 +78,8 @@ copy(c.begin(), c.end(), inserter(v, v.end())); // legal.
 copy(c.begin(), c.end(), back_inserter(v)); // legal.
 ```
 
-## [Exercise 11.18](ex11_18.cpp)
+## Exercise 11.18
+`std::map<std::string, size_t>::iterator`
 
 ## Exercise 11.19
 
