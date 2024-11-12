@@ -121,6 +121,7 @@ std::map<std::string, std::vector<int>> m;
 ## Exercise 11.24
 
 >What does the following program do?
+
 ```cpp
      map<int, int> m;
      m[0] = 1;
@@ -129,7 +130,18 @@ std::map<std::string, std::vector<int>> m;
 
 创建一个 `map` 并插入一个关键字为0的元素, 关联值进行值初始化, 然后将1赋予它.
 
-## [Exercise 11.24 ~ 11.26](ex11_24_25_26.cpp)
+## Exercise 11.25
+
+>Contrast the following program with the one in the previous exercise
+
+```cpp
+     vector<int> v;
+     v[0] = 1;
+```
+
+由于 `v` 为空, 访问一个不存在的元素会提示错误.
+
+## [Exercise 11.26](ex11_26.cpp)
 
 ## [Exercise 11.27 ~ 11.30](ex11_27_28_29_30.cpp)
 
