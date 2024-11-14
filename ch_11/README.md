@@ -143,6 +143,14 @@ std::map<std::string, std::vector<int>> m;
 
 ## [Exercise 11.26](ex11_26.cpp)
 
+## Exercise 11.27
+
+>What kinds of problems would you use count to solve? When might you use find instead?
+
+对只需要搜索 `set` 和 `map` 使用 `find`, 对需要搜索并计数的 `multi_set` 和 `multi_map` 使用 `count`.
+
+## [Exercise 11.28](ex11_28.cpp)
+
 ## [Exercise 11.27 ~ 11.30](ex11_27_28_29_30.cpp)
 
 ## [Exercise 11.31](ex11_31.cpp)
