@@ -151,7 +151,17 @@ std::map<std::string, std::vector<int>> m;
 
 ## [Exercise 11.28](ex11_28.cpp)
 
-## [Exercise 11.27 ~ 11.30](ex11_27_28_29_30.cpp)
+## Exercise 11.29
+
+>What do upper_bound, lower_bound, and equal_range return when you pass them a key that is not in the container?
+
+`upper_bound` 返回第一个大于关键字的迭代器, `lower_bound` 返回第一个不小于关键字的迭代器, 此时它们是指向同一个关键字安全插入点的迭代器, `equal_range` 返回一个 `{lower_bound, upper_bound}` 的 `pair`.
+
+## [Exercise 11.30]
+
+>Explain the meaning of the operand pos.first->second used in the output expression of the final program in this section.
+
+`pos.first` 返回从 `upper_bound` 开始循环递增的迭代器, `pos.first->second` 返回迭代器所指容器元素中的 `mapped_type`.
 
 ## [Exercise 11.31](ex11_31.cpp)
 
