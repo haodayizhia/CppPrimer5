@@ -181,7 +181,7 @@ error: passing ‘const std::map<std::basic_string<char>, std::basic_string<char
                    ^
 ```
 
-Because std::map's operator is not declared as **const**,but m is declared as a  reference to  std::map with **const**.If insert new pair,it will cause error.
+不能对 `const map` 调用下标运算符.
 
 ## Exercise 11.35
 
