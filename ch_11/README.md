@@ -187,17 +187,15 @@ error: passing ‘const std::map<std::basic_string<char>, std::basic_string<char
 
 >In buildMap, what effect, if any, would there be from rewriting `trans_map[key] = value.substr(1);` as `trans_map.insert({key, value.substr(1)})`?
 
-- use subscript operator: if a word does appear multiple times, our loops will put the **last** corresponding phrase into trans_map
-- use `insert`: if a word does appear multiple times, our loops will put the **first** corresponding phrase into trans_map
+- use subscript operator: 单词出现多次, 保存最后一个.
+- use `insert`: 单词出现多次, 保存第一个.
 
 ## Exercise 11.36
 
 >Our program does no checking on the validity of either input file. In particular, it assumes that the rules in the transformation file are all sensible.
 What would happen if a line in that file has a key, one space, and then the end of the line? Predict the behavior and then check it against your version of the program.
 
-we added a file that name "word_transformation_bad.txt" to folder `data`. the file only has a key, one space.
-
-the program of 11.33 don't influenced by that.
+抛出错误或跳过该行.
 
 ## Exercise 11.37
 
