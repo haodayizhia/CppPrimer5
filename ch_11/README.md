@@ -201,11 +201,11 @@ What would happen if a line in that file has a key, one space, and then the end 
 
 >What are the advantages of an unordered container as compared to the ordered version of that container? What are the advantages of the ordered version?
 
-- the advantages of an unordered container:
-    - useful when we have a key type for which there is no obvious ordering relationship among the elements
-    - useful for applications in which the cost of maintaining the elements in order is prohibitive
-- the advantages of the ordered version:
-    - Iterators for the ordered containers access elements in order by key
-    - we can directly define an ordered container that uses a our own class types for its key type.
+- 无序容器优点:
+    - 用于没有明显顺序的关键字类型
+    - 对无序元素获得更好的平均性能
+- 有序容器优点:
+    - 迭代器按关键字顺序存储和访问元素
+    - 可以直接定义关键字类型式自定义类类型的有序容器(重载了<运算符)
 
 ## [Exercise 11.38](ex11_38.cpp)
