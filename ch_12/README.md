@@ -38,7 +38,6 @@ StrBlob b1;
 优点: 可以自动转换类型, 更方便.
 
 缺点: 可能发生期望之外的转换, 容易出错.
-[@Mooophy](https://github.com/Mooophy):
 
 ## [Exercise 12.6](ex12_06.cpp)
 
