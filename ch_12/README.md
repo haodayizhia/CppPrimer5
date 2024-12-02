@@ -23,16 +23,7 @@ StrBlob b1;
 
 >Does this class need const versions of push_back and pop_back? If so, add them. If not, why aren’t they needed?
 
-You can certainly do this if you want to, but there doesn't seem to be any
-logical reason. The compiler doesn't complain because this doesn't modify
-data (which is a pointer) but rather the thing data points to, which is
-perfectly legal to do with a const pointer. by David Schwartz.
-
------
-
-Discussion over this exercise on [Stack Overflow](http://stackoverflow.com/questions/20725190/operating-on-dynamic-memory-is-it-meaningful-to-overload-a-const-memeber-functi)
-
-Discussion over this exercise more on [douban](http://www.douban.com/group/topic/61573279/)(chinese)
+不需要, 虽然容器内的元素是指针, 可以添加const版本, 但是通常const函数不应涉及修改容器元素内容.
 
 ## Exercise 12.4
 
