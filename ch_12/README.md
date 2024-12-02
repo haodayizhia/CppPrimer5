@@ -40,9 +40,6 @@ StrBlob b1;
 缺点: 可能发生期望之外的转换, 容易出错.
 [@Mooophy](https://github.com/Mooophy):
 
-keyword `explicit` prevents automatic conversion from an `initializer_list` to `StrBlob`.
-This design choice would easy to use but hard to debug.
-
 ## [Exercise 12.6](ex12_06.cpp)
 
 ## [Exercise 12.7](ex12_07.cpp)
