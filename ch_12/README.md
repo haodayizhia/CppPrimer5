@@ -29,10 +29,7 @@ StrBlob b1;
 
 >In our check function we didn’t check whether i was greater than zero. Why is it okay to omit that check?
 
-Because the type of `i` is `std::vector<std::string>::size_type` which
-is an `unsigned`.When any argument less than 0 is passed in, it will convert
-to a number greater than 0. In short `std::vector<std::string>::size_type`
-will ensure it is a positive number or 0.
+因为 `i` 是无符号整型, 赋予其小于0的值也会被转化为正整数.
 
 ## Exercise 12.5
 
