@@ -13,9 +13,7 @@ StrBlob b1;
 }
 ```
 
-b2 is destroyed, but the elements in b2 must not be destroyed.
-
-so b1 and b2 both have 4 elements.
+两个对象共享底层数据, 所以都是4个元素, 但是b2被销毁了.
 
 ## Exercise 12.2
 
