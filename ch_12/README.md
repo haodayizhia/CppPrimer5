@@ -35,22 +35,13 @@ StrBlob b1;
 
 >We did not make the constructor that takes an initializer_list explicit (7.5.4, p. 296). Discuss the pros and cons of this design choice.
 
+优点: 可以自动转换类型, 更方便.
+
+缺点: 可能发生期望之外的转换, 容易出错.
 [@Mooophy](https://github.com/Mooophy):
 
 keyword `explicit` prevents automatic conversion from an `initializer_list` to `StrBlob`.
 This design choice would easy to use but hard to debug.
-
-[@pezy](https://github.com/pezy):
-
-### Pros
-
-- The compiler will not use this constructor **in an automatic conversion**.
-- We can realize clearly which class we have used.
-
-### Cons
-
-- We always uses the constructor to construct **a temporary StrBlob object**.
-- cannot use the copy form of initialization with an explicit constructor. not easy to use.
 
 ## [Exercise 12.6](ex12_06.cpp)
 
