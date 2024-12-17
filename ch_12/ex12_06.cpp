@@ -12,6 +12,11 @@ void print(std::vector<int> *p) {
     std::copy(p->cbegin(), p->cend(), out_iter);
     std::cout << std::endl;
 }
-int main(int argc, char *argv[]) { 
-    
-    return 0; }
+int main(int argc, char *argv[]) {
+    auto p = pvec();
+    input(p);
+    print(p);
+    delete p;
+    p = nullptr;
+    return 0;
+}
