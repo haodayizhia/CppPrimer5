@@ -67,11 +67,7 @@ auto q2 = make_shared<int>(42), r2 = make_shared<int>(100);
 r2 = q2;
 ```
 
-- to `q` and `r`:
-
-Memory leakage happens. Because after `r = q` was executed, no pointer points to the int `r` had pointed to. It implies that no chance to free the memory for it.
-
-- to `q2` and `r2`:
+`r=q` 会导致内存泄露, 而 `r2=q2` 由于是动态内存安全.
 
 ## [Exercise 12.10](ex12_10.cpp)
 
