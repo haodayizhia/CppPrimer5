@@ -54,8 +54,7 @@ bool b() {
     return p;
 }
 ```
-
-The p will convert to a bool ,which means that the dynamic memory allocated has no chance to be freed. As a result, memory leakage will occur.
+指针p会被转换为bool类型, 动态内存将没有机会被释放, 因此会导致内存泄漏.
 
 ## Exercise 12.9
 
