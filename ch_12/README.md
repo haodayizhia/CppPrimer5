@@ -113,7 +113,7 @@ delete get返回的指针, sp变成空悬指针, 使用时发生未定义的行�
 
 ## Exercise 12.18
 
-shared_ptr指向的内存在引用计数为0时才会被释放，单个该指针不支持释放。
+shared_ptr 指向的内存在引用计数为0时才会被释放，单个该指针不支持释放。
 
 ## Exercise 12.19 [Header](ex12_19.h)|[Implementation](ex12_19.cpp)
 
