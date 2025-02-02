@@ -97,7 +97,23 @@ delete get返回的指针, sp变成空悬指针, 使用时发生未定义的行�
 
 ## [Exercise 12.16](ex12_16.cpp)
 
-## [Exercise 12.17 and 12.18](ex12_17_18.cpp)
+## Exercise 12.17
+
+(a) 错误，参数应该为动态分配内存的指针。
+
+(b)错误，同上。
+
+(c)合法，但是要注意内存会被unique_ptr释放。
+
+(d)错误，同(b)。
+
+(e)合法。
+
+(f)错误，p2没有get成员。
+
+## Exercise 12.18
+
+shared_ptr指向的内存在引用计数为0时才会被释放，单个该指针不支持释放。
 
 ## Exercise 12.19 [Header](ex12_19.h)|[Implementation](ex12_19.cpp)
 
