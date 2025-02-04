@@ -84,4 +84,3 @@ StrBlobPtr &StrBlobPtr::incr() {
 }
 StrBlobPtr StrBlob::begin() { return StrBlobPtr(*this); }
 StrBlobPtr StrBlob::end() { return StrBlobPtr(*this, data->size()); }
-int main(int argc, char *argv[]) {}
