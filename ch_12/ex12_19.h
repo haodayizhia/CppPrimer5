@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -58,6 +59,7 @@ class StrBlobPtr {
     StrBlobPtr(StrBlob &a, size_t sz = 0) : wptr(a.data), curr(sz) {}
     std::string &deref() const;
     StrBlobPtr &incr();
+    bool operator!=(const StrBlobPtr &p) { return curr != p.curr; }
 
    private:
     std::shared_ptr<std::vector<std::string>> check(std::size_t,
