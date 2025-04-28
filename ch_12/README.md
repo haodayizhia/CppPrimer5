@@ -132,7 +132,7 @@ Which version do you think is better and why?
 
 之前的版本好，更直观。
 
-## Exercise 12.22 [Header](ex12_22.h)|[Implementation](ex12_22.cpp)
+## [Exercise 12.22](ex12_22.h)
 
 ## [Exercise 12.23](ex12_23.cpp)
 
