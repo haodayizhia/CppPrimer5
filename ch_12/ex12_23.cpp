@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     std::string s1 = "hello ";
     std::string s2 = "world";
     size_t len = std::strlen(c1) + std::strlen(c2) + 1;
-    char* c3 = new char[len];
+    char* c3 = new char[len]{};
     std::strcat(c3, c1);
     std::strcat(c3, c2);
     std::cout << c3 << std::endl;
