@@ -152,7 +152,7 @@ delete [] pa;
 
 ## [Exercise 12.26](ex12_26.cpp)
 
-## Exercise 12.27 [Header](ex12_27_30.h)|[Implementation](ex12_27_30.cpp)|[Test](ex12_27_30_TEST.cpp)
+## Exercise 12.27 [Header](ex12_27_30.h)|[Test](ex12_27.cpp)
 
 ## [Exercise 12.28](ex12_28.cpp)
 
