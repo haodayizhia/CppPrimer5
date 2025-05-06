@@ -162,14 +162,14 @@ delete [] pa;
 
 ```cpp
 do {
-    std::cout << "enter word to look for, or q to quit: ";
-    string s;
-    if (!(std::cin >> s) || s == "q") break;
-    print(std::cout, tq.query(s)) << std::endl;
-} while ( true );
+    std::cout << "enter word to look for, or q to quit: " << std::endl;
+    std::string queryWord;
+    if (!(std::cin >> queryWord) || queryWord == "q") break;
+    print(std::cout, tq.query(queryWord)) << std::endl;
+} while (true)
 ```
 
-I prefer the `do while`, cause the process according with our logic.
+效果一样，`do while` 更符合直觉。
 
 ## Exercise 12.30 [Header](ex12_27_30.h)|[Implementation](ex12_27_30.cpp)|[Test](ex12_27_30_TEST.cpp)
 
