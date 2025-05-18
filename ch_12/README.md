@@ -177,7 +177,7 @@ do {
 
 >What difference(s) would it make if we used a vector instead of a set to hold the line numbers? Which approach is better? Why?
 
-The `vector` can not ensure no duplicates. Hence, in terms of this programme `set` is a better option.
+`set` 更好，可以保证不重复和自动排序。
 
 ## Exercise 12.32 [Header](ex12_32.h)|[Implementation](ex12_32.cpp)
 
