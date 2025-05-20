@@ -179,6 +179,6 @@ do {
 
 `set` 更好，可以保证不重复和自动排序。
 
-## Exercise 12.32 [Header](ex12_32.h)|[Implementation](ex12_32.cpp)
+## Exercise 12.32 [Header](ex12_32.h)
 
 ## Exercise 12.33 [Header](ex12_33.h)|[Implementation](ex12_33.cpp)
