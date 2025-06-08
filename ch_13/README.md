@@ -4,15 +4,14 @@
 
 > What is a copy constructor? When is it used?
 
-A copy constructor is a constructor which first parameter is a **reference** to the class type and any additional parameters have **default values**.
+如果一个构造函数的第一个参数是自身类型的引用，且任何额外参数都有默认值，则此构造函数是初始函数。需要用一个同类型去拷贝初始化某个类型时使用。
 
-When copy initialization happens and that copy initialization requires either the copy constructor or the move constructor.
-
-- Define variables using an `=`
-- Pass an object as an argument to a parameter of non-reference type
-- Return an object from a function that has a non-reference return type
-- Brace initialize the elements in an array or the members of an aggregate class
-- Some class types also use copy initialization for the objects they allocate.
+- 用一个类型去初始化同类型
+- 用 `=` 定义变量
+- 将一个对象作为实参传递给一个非引用类型的形参
+- 从一个返回类型为非引用类型的函数返回一个对象
+- 用花括号列表初始化一个数组中的元素或一个聚合类中的成员
+- 类类型对分配的对象使用拷贝初始化
 
 ## Exercise 13.2
 
@@ -22,7 +21,7 @@ When copy initialization happens and that copy initialization requires either th
 > Sales_data::Sales_data(Sales_data rhs);
 > ```
 
-If declaration like that, the call would never succeed to call the copy constructor, `Sales_data rhs` is an argument to a parameter, thus, we'd need to use the copy constructor to copy the argument, but to copy the argument, we'd need to call the copy constructor, and so on indefinitely.
+拷贝构造函数的第一个参数必须是自身的引用，否则调用和拷贝无限循环。
 
 ## Exercise 13.3
 
