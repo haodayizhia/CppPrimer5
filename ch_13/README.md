@@ -25,29 +25,9 @@
 
 ## Exercise 13.3
 
-> What happens when we copy a `StrBlob`? What about `StrBlobPtrs`?
+> What happens when we copy a `StrBlob`? What about `StrBlobPtr`?
 
-```cpp
-// added a public member function to StrBlob and StrBlobPrts
-long count() {
-    return data.use_count(); // and wptr.use_count();
-}
-
-// test codes in main()
-StrBlob str({"hello", "world"});
-std::cout << "before: " << str.count() << std::endl; // 1
-StrBlob str_cp(str);
-std::cout << "after: " << str.count() << std::endl;  // 2
-
-ConstStrBlobPtr p(str);
-std::cout << "before: " << p.count() << std::endl; // 2
-ConstStrBlobPtr p_cp(p);
-std::cout << "after: " << p.count() << std::endl; // 2
-```
-
-when we copy a `StrBlob`, the `shared_ptr` member's use_count add one.
-
-when we copy a `StrBlobPrts`, the `weak_ptr` member's use_count isn't changed.(cause the count belongs to `shared_ptr`\)
+拷贝 `StrBlob` 时类成员指针的引用计数加一，拷贝 `StrBlobPtr` 时 `weak_ptr` 绑定的 `shared_ptr` 引用计数不变。
 
 ## Exercise 13.4
 
