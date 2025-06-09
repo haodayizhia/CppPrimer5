@@ -50,19 +50,19 @@
 
 > What is a `copy-assignment` operator? When is this operator used? What does the synthesized `copy-assignment` operator do? When is it synthesized?
 
-The `copy-assignment` operator is function named `operator=`.
+类的重载赋值运算符函数，左侧运算对象绑定到隐式的 `this` 参数，接受一个与其所在类相同类型的参数，返回一个指向其左侧运算对象的引用。
 
-This operator is used when assignment occurred.
+用同类型赋值时使用。
 
-The synthesized `copy-assignment` operator assigns each non-static member of the right-hand object to corresponding member of the left-hand object using the `copy-assignment` operator for the type of that member.
+合成拷贝赋值运算符通过调用成员类型的拷贝赋值运算符，将右侧运算对象的每个非 `static` 成员赋予左侧运算对象的对应成员。对于某些类，合成的拷贝赋值运算符用来禁止该类型对象的赋值。
 
-It is synthesized when the class does not define its own.
+如果一个类未定义自己的拷贝赋值运算符，编译器会合成一个拷贝赋值运算符。
 
 ## Exercise 13.7
 
 > What happens when we assign one `StrBlob` to another? What about `StrBlobPtrs`?
 
-In both cases, shallow copy will happen. All pointers point to the same address. The `use_count` changed the same as 13.3.
+拷贝智能指针，但是只有 `StrBlob` 的指针引用计数会递增。
 
 ## [Exercise 13.8](ex13_08.h)
 
