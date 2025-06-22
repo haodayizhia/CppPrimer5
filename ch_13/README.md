@@ -70,19 +70,19 @@
 
 > What is a destructor? What does the synthesized destructor do? When is a destructor synthesized?
 
-The destructor is a member function with the name of the class prefixed by a tilde(`~`).
+析构函数是类的一个成员函数，名字由波浪号接类名构成，它没有返回值，也不接受参数。析构函数在类的销毁阶段执行函数体，然后在隐式的析构部分销毁成员。
 
-As with the copy constructor and the copy-assignment operator, for some classes, the synthesized destructor is defined to disallow objects of the type from being destroyed. Otherwise, the synthesized destructor has an empty function body.
+当一个类未定义自己的析构函数时，编译器会为它定义一个合成析构函数。
 
-The compiler defines a synthesized destructor for any class that does not define its own destructor.
+对于某些类，合成析构函数被用来阻止该类型的对象被销毁。
 
 ## Exercise 13.10
 
 > What happens when a `StrBlob` object is destroyed? What about a `StrBlobPtr`?
 
-When a `StrBlob` object destroyed, the `use_count` of the dynamic object will decrement. It will be freed if no `shared_ptr` to that dynamic object.
+调用 `string` 的析构函数销毁 `bookNo` 成员。
 
-When a `StrBlobPter` object is destroyed the object dynamically allocated will not be freed.
+不会释放动态分配的对象。
 
 ## [Exercise 13.11](ex13_11.h)
 
